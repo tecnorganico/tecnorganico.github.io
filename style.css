@@ -1,0 +1,16 @@
+body {
+    text-align: center;
+    background-color: chocolate;
+    padding: 5%;
+}
+
+p {
+    font-size: 1.05rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+img, iframe {
+    border-radius: 100px;
+    max-width: 200px;
+    max-height: 200px;
+}
