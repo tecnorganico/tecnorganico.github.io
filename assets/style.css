@@ -1,4 +1,4 @@
-/* rocketseat init */
+/* código visto nas aulas da semana omnistack 08 da rocketseat */
 * {
     margin: 0;
     padding: 0;
@@ -28,13 +28,14 @@ body, input, button {
 }
 /* rocketseat fim */
 
+/* estiliza conteúdo da tag <img> */
 img {
     border-radius: 100px;
     max-width: 200px;
     max-height: 200px;
     margin-bottom: 10px;
 }
-
+/* estiliza dentro da <div> com a classe .corpo */
 .corpo {
     display: flex;
     justify-content: center;
@@ -42,15 +43,16 @@ img {
     text-align: center;
     flex-direction: column;
 }
-
+/* estiliza a tag <form> dentro da <div> com a classe .corpo */
 .corpo form {
     width: 100%; /*       hack para responsividade  */
-    max-width: 300px; /*                            */
+    max-width: 300px; /*  peguei da OmniStack       */
     display: flex;
     flex-direction: column;
     font-size: 20px;
 }
 
+/* estiliza a tag <input> dentro da tag <form> dentro da <div> com a classe .corpo */
 .corpo form input {
     margin-top: 10px; /* espaço acima da caixa de texto */
     border: 1px solid #ddd;
@@ -62,6 +64,7 @@ img {
     color: #666;
 }
 
+/* estiliza a tag <button> dentro da tag <form> dentro da <div> com a classe .corpo */
 .corpo form button {
     margin-top: 2px;
     border: 0;
@@ -73,10 +76,4 @@ img {
     font-weight: bold;
     color: #fff;
     cursor: pointer;
-}
-
-.corpo form ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
 }
