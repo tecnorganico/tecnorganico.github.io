@@ -41,6 +41,7 @@ img {
     max-width: 200px;
     max-height: 200px;
     margin-bottom: 10px;
+    box-shadow: 60px -16px #ffd900;
 }
 /* estiliza dentro da <div> com a classe .corpo */
 .corpo {
@@ -56,7 +57,7 @@ img {
     max-width: 300px; /*  peguei da OmniStack       */
     display: flex;
     flex-direction: column;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
 }
 
 /* estiliza a tag <input> dentro da tag <form> dentro da <div> com a classe .corpo */
@@ -67,7 +68,7 @@ img {
     height: 30px;
     padding: 0 2px;
     text-align: center; /* centraliza texto */
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     color: #666;
 }
 
@@ -87,8 +88,10 @@ img {
 /* estiliza o pézin do site */
 footer p {
   text-align: center;
+  
 }
 footer p a {
   text-decoration: none;
-  color: #664114;
+  color: #ffd900; 
+  font-weight: bold;
 }
