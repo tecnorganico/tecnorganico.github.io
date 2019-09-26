@@ -4,6 +4,6 @@ function comoChama() {
   console.log("phe");
   const name = document.querySelector(".pergunta").value;
   console.log(name);  
-	document.querySelector(".resposta").textContent = `${name}, tem algmas coisas minhas nos endereços abaixo, vai no botão de gatinho`;
+	document.querySelector(".resposta").textContent = `${name}, tem algumas coisas minhas abaixo, fica à vontade`;
 }
 // gostou? alguma sugestão? fala comigo!
