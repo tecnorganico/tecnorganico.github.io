@@ -42,7 +42,10 @@ img {
     max-width: 200px;
     max-height: 200px;
     margin-bottom: 10px;
-    box-shadow: 60px -16px #ffd900;
+    box-shadow: 60px -16px 2px #ffd900;
+}
+h1 {
+  text-shadow: 4px 4px 8px rgba(8, 8, 8, 0.664);
 }
 /* estiliza dentro da <div> com a classe .corpo */
 .corpo {
@@ -67,25 +70,28 @@ img {
     margin-top: 10px; /* espaço acima da caixa de texto */
     border: 1px solid #ddd;
     border-radius: 4px;
-    height: 30px;
+    height: 48px;
     padding: 0 2px;
     text-align: center; /* centraliza texto */
     font-size: 1.3rem;
     color: #666;
+    box-shadow: 4px 4px 8px #000000c4;
 }
 
 /* estiliza a tag <button> dentro da tag <form> dentro da <div> com a classe .corpo */
 .corpo form button {
-    margin-top: 2px;
+    margin-top: 10px;
     border: 0;
     border-radius: 4px;
-    height: 30px;
+    height: 48px;
     margin-bottom: 10px;
     font-size: 16px;
     background: #664114;
     font-weight: bold;
     color: #fff;
     cursor: pointer;
+    font-size: 1em;
+    box-shadow: 4px 4px 8px #000000c4;
 }
 .hidden {
   display: none;
@@ -106,4 +112,6 @@ img {
 
 footer p {
   font-size: 0.6em;
+
+  text-shadow: 4px 4px 4px rgba(8, 8, 8, 0.664);
 }
