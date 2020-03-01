@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <!-- opengraph especifica como sua página irá se portar em redes sociais, como o Facebook por exemplo -->
     <meta property="og:locale" content="pt_BR">
-    <meta property="og:url" content="https://abequar.github.io/">        
+    <meta property="og:url" content="https://abequar.github.io/">
     <meta property="og:title" content="portfolio bebê">
-    <meta property="og:site_name" content="jovem site do Ramires">        
-    <meta property="og:description" content="some good description to make peeople curious.">        
+    <meta property="og:site_name" content="jovem site do Ramires">
+    <meta property="og:description" content="some good description to make peeople curious.">
     <meta property="og:image" content="./assets/img/benPro.png">
     <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:width" content="800"> 
-    <meta property="og:image:height" content="600">               
-    <meta property="og:type" content="website"> 
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="600">
+    <meta property="og:type" content="website">
     <!-- fim opengraph -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,47 +22,42 @@
     <title>Ramires e o teu?</title>
     <meta name="Description" content="Quem tá ligado, tá ligado.">
     <!-- endereça o css -->
-    <link rel="stylesheet" type="text/css" href="./assets/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/index.css">
+    <link rel="stylesheet" href="./assets/icomoon/style.css">
     <!-- altera cor da barra do navegador no Android, Opera e Firefox OS -->
     <meta name="theme-color" content="#664114">
 </head>
+
 <body>
     <header>
-            <img src="./assets/img/benPro.png" alt="homem negro, cabelo black, segurando um notebook junto ao rosto, como se estivesse falando ao telefone">
+        <img src="https://avatars2.githubusercontent.com/u/33255268?s=460&v=4"
+            alt="homem negro, cabelo black, segurando um notebook junto ao rosto, como se estivesse falando ao telefone">
     </header>
-    <section class="corpo">   
+    <section class="corpo">
+        <h1>Oi, sou Ramires, como você se chama?</h1>
         <!-- o 'comochama' envia uma mensagem personalizada com o nome de quem visita <3 -->
-        <form onsubmit="comoChama()">           
-            oi, <br>
-            pode me chamar de ramires <br>
-            como você se chama? 
-        <input class="pergunta" placeholder="escreve aqui" type="text" >
-        <button type="submit" onclick="comoChama()"> toca aqui </button>         
-        <p class="resposta"></p>   
-        </form> 
+        <form>
+            <input class="pergunta" placeholder="escreve aqui" type="text">
+            <button type="submit" onclick="comoChama()"> toca aqui </button>
+            <p class="hidden">
+                <span class="resposta">Cibernauta</span>, abaixo você tem acesso ao meu currículo e Github!
+            </p>
+        </form>
         <!-- fim 'comochama' -->
-    </section>  
-    
-    <footer>
-        <p class="contatos"> <br>
-            <a target="_blank" href="./assets/pdf/rafael_ramires_resume.pdf">veja meu currículo</a>  
-            <br> <br>
-            <a href="https://github.com/abequar" target="_blank">
-                <svg id="gh" width="48px" height="48px" enable-background="new 0 0 64 64" version="1.1" viewBox="0 0 64 64" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <g id="Layer_3">
-                        <g>
-                            <g>
-                                <path d="M32,0C14.327,0,0,14.327,0,32c0,17.673,14.327,32,32,32s32-14.327,32-32C64,14.327,49.673,0,32,0z" fill="#ffd900"/></g></g><g id="Outline_Filled">
-                                <path d="M38.592,50.166h-4.84h-4.844c0,0,0.014-2.874,0-4.844c-6.629,1.428-8.479-3.633-8.479-3.633    c-1.21-2.423-2.423-3.633-2.423-3.633c-2.423-1.438,0-1.21,0-1.21c2.423,0,3.633,2.423,3.633,2.423    c2.126,3.609,5.908,3.028,7.266,2.423c0-1.21,0.53-3.042,1.21-3.633c-5.29-0.595-9.693-3.633-9.693-9.689s1.216-7.266,2.427-8.479    c-0.244-0.597-1.259-2.805,0.037-6.056c0,0,2.38,0,4.803,3.633c1.2-1.2,4.844-1.21,6.056-1.21c1.208,0,4.854,0.01,6.054,1.21    c2.423-3.633,4.809-3.633,4.809-3.633c1.296,3.251,0.282,5.459,0.037,6.056c1.21,1.21,2.423,2.423,2.423,8.479    s-4.397,9.092-9.689,9.689c0.682,0.591,1.21,2.675,1.21,3.633L38.592,50.166L38.592,50.166z" fill="#FFFFFF" id="Cat_3_"/>
-                        </g>
-                    </g>
-                </svg>
-            </a>
+    </section>
+
+    <section class="portfolio">
+        <p class="contatos">
+            <a class="icon-pdf" target="_blank" href="./assets/pdf/rafael_ramires_resume.pdf">
+                <a class="icon-github" href="https://github.com/abequar" target="_blank"> </a>
         </p>
+    </section>
+    <footer>
+        <p>Feito com amor por mim mesmo <3 </p>
     </footer>
     <script src="./assets/comochama.js"></script>
-    
 </body>
+
 </html>
 
 <!-- gostou? alguma dúvida do que fiz ou dica por favor fale comigo >> https://twitter.com/madaceda ou pelo e-mail rafysta@tuta.io -->

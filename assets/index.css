@@ -12,6 +12,7 @@
     justify-content: center;
     align-items: center;
     color: #ddd;
+    line-height: 1.5;
   }
   
 body {
@@ -85,13 +86,23 @@ img {
     color: #fff;
     cursor: pointer;
 }
-/* estiliza o pézin do site */
-footer p {
-  text-align: center;
-  
+.hidden {
+  display: none;
 }
-footer p a {
+
+/* estiliza os endereços, githbu e curriculo do site */
+.portfolio p {
+  text-align: center;
+  margin: 8px 0 0 0;
+}
+.portfolio p a {
   text-decoration: none;
+  font-size: 2em;
   color: #ffd900; 
   font-weight: bold;
+  
+}
+
+footer p {
+  font-size: 0.6em;
 }
