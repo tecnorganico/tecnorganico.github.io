@@ -51,6 +51,7 @@ img {
     align-items: center;
     text-align: center;
     flex-direction: column;
+    padding: 0 20px;
 }
 /* estiliza a tag <form> dentro da <div> com a classe .corpo */
 .corpo form {
