@@ -26,11 +26,11 @@
       },
       "links": [
         {
-          "title": "Leia minha mini autobiografia!",
-          "summary": "Texto autobiográfico e profissional hospedado no blog Ramificando Pensações.",
+          "title": "leia minha mini autobiografia!",
+          "summary": "texto autobiográfico e profissional hospedado no blog Ramificando Pensações.",
           "date": "19 de outubro de 2026",
           "url": "https://blog.bantu.social/tecnorganico/sobre",
-          "label": "Ler no blog",
+          "label": "LER NO BLOGUE",
           "address": "https://blog.bantu.social/tecnorganico/sobre",
           "primary": true
         }
@@ -39,7 +39,7 @@
     {
       "id": "escritos",
       "label": "Escritos",
-      "response": "Este é a parte do meu jardim digital que mais tenho apreço. É onde guardo minhas escrituras, tudo de minha autoria. Sem IA generativa.",
+      "response": "este é a parte do meu jardim digital que mais tenho apreço. É onde guardo minhas escrituras, tudo de minha autoria. Sem IA generativa.",
       "links": [
         {
           "title": "Publicações",
@@ -76,7 +76,7 @@
     },
     {
       "id": "projetos",
-      "label": "Projetos que colaborei",
+      "label": "Projetinhos",
       "response": "aqui vou compartilhar o que fiz e ando por aí fazendo.",
       "reading": {
         "title": "projetos pessoais",
