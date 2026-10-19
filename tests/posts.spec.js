@@ -78,8 +78,15 @@ test("provides a public writings listing and return link", async ({ page }) => {
   await expect(page.getByRole("heading", { name: "Publicações" })).toBeVisible();
   await expect(page.getByRole("link", { name: "Voltar ao início" })).toHaveAttribute("href", "../#escritos");
   await expect(page.getByRole("searchbox", { name: "Buscar publicações" })).toBeVisible();
-  await expect(page.locator("[data-post]")).toHaveCount(0);
-  await expect(page.locator("[data-empty-posts]")).toContainText("Ainda não há publicações próprias publicadas.");
+  const posts = require("../scripts/build-posts").publicPosts();
+  await expect(page.locator("[data-post]")).toHaveCount(posts.length);
+  if (posts.length === 0) {
+    await expect(page.locator("[data-empty-posts]")).toContainText("Ainda não há publicações próprias publicadas.");
+  } else {
+    for (const post of posts) {
+      await expect(page.locator("[data-post]")).toContainText([post.title]);
+    }
+  }
   const results = await new AxeBuilder({ page }).analyze();
   expect(results.violations).toEqual([]);
 });
