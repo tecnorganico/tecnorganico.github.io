@@ -56,7 +56,7 @@ test("renders the approved public contact wording", async ({ page }) => {
 test("renders the approved header subtitle and keeps photo credit out of visible content", async ({ page }) => {
   await page.goto("/");
   await expect(page.locator("[data-site-subtitle]")).toHaveText("Autonomia digital se faz em coletivo");
-  await expect(page.locator("[data-site-signature]")).toHaveText("Vida, técnica e palavra.");
+  await expect(page.locator("[data-site-signature]")).toHaveText("Autonomia digital se faz em coletivo");
   await expect(page.locator("[data-photo-credit]")).toHaveCount(0);
   await expect(page.locator("[data-site-photo]")).toHaveAttribute(
     "alt",

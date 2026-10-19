@@ -4,7 +4,8 @@
   "scripts": {
     "qa": "npm run build:posts && playwright test",
     "qa:report": "playwright show-report",
-    "build:posts": "node scripts/build-posts.js"
+    "build:posts": "node scripts/build-posts.js",
+    "build:artifact": "npm run build:posts && node scripts/prepare-site.js"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.2",

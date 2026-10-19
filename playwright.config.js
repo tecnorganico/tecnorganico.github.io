@@ -10,17 +10,19 @@ module.exports = defineConfig({
   workers: process.env.CI ? 1 : undefined,
   timeout: 30000,
   use: {
-    baseURL: "http://127.0.0.1:8765",
+    baseURL: process.env.BASE_URL || "http://127.0.0.1:8765",
     trace: "retain-on-failure",
     screenshot: "only-on-failure",
     video: "retain-on-failure",
   },
-  webServer: {
-    command: "python3 -m http.server 8765",
-    url: "http://127.0.0.1:8765",
-    reuseExistingServer: true,
-    timeout: 10000,
-  },
+  webServer: process.env.BASE_URL
+    ? undefined
+    : {
+        command: "python3 -m http.server 8765",
+        url: "http://127.0.0.1:8765",
+        reuseExistingServer: true,
+        timeout: 10000,
+      },
   projects: [
     { name: "chromium", use: { ...devices["Desktop Chrome"] } },
     { name: "firefox", use: { ...devices["Desktop Firefox"] } },

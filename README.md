@@ -43,6 +43,15 @@ Abra `http://127.0.0.1:8000/`.
 - A criação de uma publicação fictícia e a associação de uma imagem foram confirmadas pelo Pages CMS em `cms-test`; o artigo permanece com `draft: true` e não entra na saída gerada. A primeira falha de upload permanece sem causa confirmada; a segunda tentativa funcionou. Imagens de teste não devem ser confundidas com conteúdo editorial.
 - A edição do resumo do rascunho também foi confirmada pelo CMS e sincronizada localmente; o campo continua excluído da saída enquanto `draft: true` permanecer ativo.
 - A exclusão do rascunho pelo CMS também foi confirmada em `cms-test`; o artigo saiu do repositório e da saída gerada, enquanto as imagens de teste permaneceram preservadas.
+
+## Build e publicação futura
+
+- `npm run build:artifact` gera `posts/` e monta o artefato mínimo em `_site/`, contendo somente a entrada do site, estilos, comportamento, `content/site.json`, assets e páginas de publicações geradas.
+- O workflow `.github/workflows/pages.yml` instala dependências com `npm ci`, instala Chromium, gera o artefato, executa o QA contra `_site/` e interrompe antes do upload se uma verificação falhar.
+- O workflow só pode executar build/deploy quando `github.ref` é `refs/heads/master`; `cms-test` não dispara publicação, inclusive por execução manual.
+- O deploy usa `actions/upload-pages-artifact` e `actions/deploy-pages`, sem commitar os arquivos gerados.
+- A configuração atual do GitHub Pages ainda é `legacy`, publicada pela raiz de `master`. Para ativar o workflow, a fonte de publicação deverá ser alterada manualmente em **Settings → Pages → Build and deployment → GitHub Actions**, depois que a branch e o workflow forem aprovados.
+- O deploy não foi executado nesta etapa. A validação realizada em `cms-test` cobre somente build, composição do artefato e QA local servido a partir dele.
 - Publicações individuais ficam em `content/posts/*.md` e são geradas para `posts/*.html` por `npm run build:posts`. Apenas arquivos sem `draft: true` entram na listagem, busca e páginas públicas. O build é uma etapa local/reprodutível; para publicação futura será necessário executá-lo em uma branch de teste ou em um workflow antes de publicar pelo GitHub Pages.
 - O Pages CMS pode editar `content/site.json` (identidade, biografia, fotografia, trajetória, escritos, projetos e contatos) e criar arquivos Markdown em `content/posts/`. A configuração não autentica o CMS por si só. O repositório remoto ainda usa GitHub Pages legado; salvar no CMS cria commits, mas novos posts só aparecerão no site depois de `npm run build:posts` e da publicação dos arquivos gerados.
 

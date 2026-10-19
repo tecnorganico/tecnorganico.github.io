@@ -25,6 +25,42 @@ test("excludes draft posts from generated pages, listing, and search", async () 
   expect(listing).not.toContain("Fixture em rascunho");
 });
 
+test("removes a post page after it becomes a draft or is deleted", async () => {
+  const transitionSource = path.join(__dirname, "..", "test-results", "post-transition-source");
+  const transitionOutput = path.join(__dirname, "..", "test-results", "post-transition-output");
+  fs.rmSync(transitionSource, { recursive: true, force: true });
+  fs.rmSync(transitionOutput, { recursive: true, force: true });
+  fs.mkdirSync(transitionSource, { recursive: true });
+
+  const published = `---
+title: Publicação transitória
+slug: publicacao-transitoria
+date: 2026-10-18
+summary: Conteúdo temporário.
+draft: false
+---
+Texto temporário.
+`;
+  const sourcePath = path.join(transitionSource, "publicacao-transitoria.md");
+  fs.writeFileSync(sourcePath, published);
+
+  const build = () => execFileSync(process.execPath, [generator], {
+    env: { ...process.env, POSTS_SOURCE: transitionSource, POSTS_OUTPUT: transitionOutput },
+    stdio: "pipe",
+  });
+
+  build();
+  expect(fs.existsSync(path.join(transitionOutput, "publicacao-transitoria.html"))).toBe(true);
+
+  fs.writeFileSync(sourcePath, published.replace("draft: false", "draft: true"));
+  build();
+  expect(fs.existsSync(path.join(transitionOutput, "publicacao-transitoria.html"))).toBe(false);
+
+  fs.rmSync(sourcePath);
+  build();
+  expect(fs.existsSync(path.join(transitionOutput, "publicacao-transitoria.html"))).toBe(false);
+});
+
 test("renders a published individual page with a direct return link", async ({ page }) => {
   fs.rmSync(fixtureOutput, { recursive: true, force: true });
   execFileSync(process.execPath, [generator], {
