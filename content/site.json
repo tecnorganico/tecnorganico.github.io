@@ -18,20 +18,22 @@
       "response": "A trajetória está descrita em uma página autoral no blog Ramificando Pensações. Ela reúne educação popular, tecnologia, pesquisa e autonomia digital.",
       "reading": {
         "title": "Minha trajetória",
-        "text": "A versão publicada aqui ainda depende de revisão editorial de Raffael. Por enquanto, a fonte autorizada é a página “sobre” do blog.",
+        "text": "Comecei na área técnica, e dei um passeio na educação. Desde então, nunca mais desvinculei as 2 coisas. Educação e tecnologia são pares no meu coração.",
         "points": [
-          "educação popular, tecnologia e pesquisa;",
+          "Educação popular, tecnologia e pesquisa;",
           "Baixada Fluminense como território de origem;",
-          "Nerd de Aluguel, Cuidados Digitais, InfoCria e outras experiências citadas na fonte."
+          "Nerd de Aluguel, Cuidados Digitais, InfoCria e outras experiências."
         ]
       },
       "links": [
         {
           "title": "Fonte autorizada: sobre",
-          "summary": "Texto biográfico e profissional hospedado no blog Ramificando Pensações.",
+          "summary": "Texto autobiográfico e profissional hospedado no blog Ramificando Pensações.",
+          "date": "2026-10-19",
           "url": "https://blog.bantu.social/tecnorganico/sobre",
           "label": "Ler no blog",
-          "primary": false
+          "address": "https://blog.bantu.social/tecnorganico/sobre",
+          "primary": true
         }
       ]
     },
