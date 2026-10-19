@@ -4,10 +4,10 @@
   "identity": {
     "name": "Raffael Baptista",
     "subtitle": "Autonomia digital se faz em coletivo",
-    "signature": "Vida, técnica e palavra."
+    "signature": "Autonomia digital se faz em coletivo"
   },
   "photo": {
-    "src": "assets/media/raffael-baptista.jpeg",
+    "src": "/assets/media/raffael-baptista.jpeg",
     "alt": "Raffael Baptista sorrindo, de óculos, diante de um fundo laranja. Fotografia autoral de Raffael Baptista, editada utilizando GPT-5.1.",
     "credit": "Fotografia de Raffael Baptista, editada utilizando GPT-5.1."
   },
@@ -30,7 +30,8 @@
           "title": "Fonte autorizada: sobre",
           "summary": "Texto biográfico e profissional hospedado no blog Ramificando Pensações.",
           "url": "https://blog.bantu.social/tecnorganico/sobre",
-          "label": "Ler no blog"
+          "label": "Ler no blog",
+          "primary": false
         }
       ]
     },
@@ -43,27 +44,31 @@
           "title": "Publicações deste site",
           "summary": "Lista de textos publicados diretamente no site pessoal.",
           "url": "posts/index.html",
-          "label": "Abrir publicações"
+          "label": "Abrir publicações",
+          "primary": false
         },
         {
           "title": "Comic Sans ainda mora aqui",
           "summary": "Memória visual, Comic Sans, fediverso, #tersoftware e a conversa sobre fontes.",
           "date": "26 de agosto de 2026",
           "url": "https://blog.bantu.social/tecnorganico/comic-sans-ainda-mora-aqui",
-          "label": "Abrir texto original"
+          "label": "Abrir texto original",
+          "primary": false
         },
         {
           "title": "O tédio voltou",
           "summary": "Um convite editorial para passar 48 horas fora do feed, com limites e referências de estudos.",
           "date": "24 de agosto de 2026",
           "url": "https://blog.bantu.social/tecnorganico/o-tedio-voltou",
-          "label": "Abrir texto original"
+          "label": "Abrir texto original",
+          "primary": false
         },
         {
           "title": "Ramificando Pensações",
           "summary": "Jardim digital e arquivo de textos do Tecnorgânico.",
           "url": "https://blog.bantu.social/tecnorganico/",
-          "label": "Abrir o arquivo"
+          "label": "Abrir o arquivo",
+          "primary": false
         }
       ]
     },
@@ -98,52 +103,60 @@
           "title": "Signal",
           "summary": "Você também pode falar comigo pelo Signal.",
           "url": "https://signal.me/#p/+5521977229377",
-          "label": "Abrir Signal"
+          "label": "Abrir Signal",
+          "primary": false
         },
         {
           "title": "Telegram",
           "summary": "Você também pode falar comigo pelo Telegram.",
           "url": "https://t.me/+5521977229377",
-          "label": "Abrir Telegram"
+          "label": "Abrir Telegram",
+          "primary": false
         },
         {
           "title": "E-mail",
           "summary": "raffael@cuidadosdigitais.com.br",
           "url": "mailto:raffael@cuidadosdigitais.com.br",
+          "label": "Enviar e-mail",
           "address": "raffael@cuidadosdigitais.com.br",
-          "label": "Enviar e-mail"
+          "primary": false
         },
         {
           "title": "XMPP",
           "summary": "Endereço copiável para conversas XMPP.",
           "url": "xmpp:imbariense@conversations.im?message",
+          "label": "Abrir XMPP",
           "address": "imbariense@conversations.im",
-          "label": "Abrir XMPP"
+          "primary": false
         },
         {
           "title": "Matrix",
           "summary": "Endereço copiável para conversas Matrix.",
           "url": "https://matrix.to/#/@imbariense:matrix.org",
+          "label": "Abrir Matrix",
           "address": "@imbariense:matrix.org",
-          "label": "Abrir Matrix"
+          "primary": false
         },
         {
           "title": "Mastodon",
           "summary": "@tecnorganico@bantu.social",
           "url": "https://bantu.social/@tecnorganico",
-          "label": "Abrir perfil"
+          "label": "Abrir perfil",
+          "primary": false
         },
         {
           "title": "WriteFreely",
           "summary": "Arquivo de textos e publicações.",
           "url": "https://blog.bantu.social/tecnorganico/",
-          "label": "Abrir arquivo"
+          "label": "Abrir arquivo",
+          "primary": false
         },
         {
           "title": "Pixelfed",
           "summary": "Perfil @esquecidinho.",
           "url": "https://pixelfed.social/esquecidinho",
-          "label": "Abrir perfil"
+          "label": "Abrir perfil",
+          "primary": false
         }
       ]
     }
