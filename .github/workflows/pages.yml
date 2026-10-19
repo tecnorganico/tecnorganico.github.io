@@ -3,6 +3,7 @@ name: Build and deploy site
 on:
   push:
     branches:
+      - cms-test
       - master
   workflow_dispatch:
 
@@ -12,7 +13,6 @@ concurrency:
 
 jobs:
   build:
-    if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -45,10 +45,9 @@ jobs:
           python3 -m http.server 8765 --directory _site >/tmp/tecnorganico-pages.log 2>&1 &
           server_pid=$!
           trap 'kill "$server_pid"' EXIT
-          for attempt in $(seq 1 20); do
-            if curl --fail --silent http://127.0.0.1:8765/ >/dev/null; then
-              break
-            fi
+          attempts=0
+          until curl --fail --silent http://127.0.0.1:8765/ >/dev/null || [ "$attempts" -ge 20 ]; do
+            attempts=$((attempts + 1))
             sleep 1
           done
           curl --fail --silent http://127.0.0.1:8765/ >/dev/null
