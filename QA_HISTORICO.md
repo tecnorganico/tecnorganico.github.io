@@ -75,3 +75,12 @@ Os resultados desta entrada são QA automatizado. Inspeção visual e validaçã
 - **Sincronização:** a cópia local foi atualizada por fast-forward até o mesmo commit, sem descarte de alterações.
 - **QA:** o build gerou somente `index.html`; não houve página individual nem presença do título/resumo na listagem. Os 6 testes focados passaram em Chromium e Chromium móvel.
 - **Limite:** a exclusão do rascunho pelo painel ainda não foi executada; o arquivo permanece intencionalmente no GitHub e marcado como rascunho.
+
+## 2026-10-19 00:09 — exclusão do rascunho pelo Pages CMS
+
+- **Operação real no Pages CMS:** o artigo fictício foi excluído na branch `cms-test`.
+- **Commit confirmado:** `586e08feff45cf71d00eb982121d03e8f20fc4e2` (`content(delete): content/posts/rascunho-de-teste-do-cms.md`).
+- **Escopo da remoção:** o commit removeu somente `content/posts/rascunho-de-teste-do-cms.md`. Os quatro arquivos JPEG em `assets/media/`, inclusive a imagem associada ao artigo, permaneceram no GitHub.
+- **Sincronização:** a cópia local foi atualizada por fast-forward, sem descarte de alterações.
+- **QA:** `npm run build:posts` gerou zero publicações; não existe fonte do rascunho, página individual ou entrada na listagem. Os 6 testes focados passaram em Chromium e Chromium móvel.
+- **Conclusão do ciclo:** criação, associação de imagem, edição, exclusão e exclusão da saída pública foram verificadas. A limpeza posterior dos arquivos de imagem de teste permanece uma ação separada, a ser feita somente para arquivos criados neste teste.
