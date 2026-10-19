@@ -75,15 +75,15 @@
     },
     {
       "id": "projetos",
-      "label": "Conhe' os projetos",
-      "response": "Os nomes abaixo aparecem nas fontes consultadas, mas a situação de cada projeto ainda precisa ser confirmada antes de virar portfólio.",
+      "label": "Projetos que colaborei",
+      "response": "aqui vou compartilhar o que fiz e ando por aí fazendo.",
       "reading": {
-        "title": "Projetos e contribuições",
-        "text": "Não vou transformar menções em descrições definitivas sem a revisão de Raffael. A organização inicial separa universos autorais e frentes de trabalho para facilitar essa decisão.",
+        "title": "projetos pessoais",
+        "text": "coisas que eu fiz, comecei fazer ou tô metendo a mão na massa ainda.",
         "points": [
           "Tecnorgânico: universo autoral;",
-          "Nerd de Aluguel: suporte técnico humanizado;",
-          "Cuidados Digitais: tema e frente de educação em segurança e privacidade;",
+          "Nerd de Aluguel: serviço suporte técnico humanizado;",
+          "Cuidados Digitais: tema e frente de educação em segurança digital e privacidade;",
           "InfoCria: construção coletiva de autonomia digital."
         ]
       }
