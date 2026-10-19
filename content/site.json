@@ -39,11 +39,11 @@
     {
       "id": "escritos",
       "label": "Ler meus escritos",
-      "response": "Os textos ainda estão em inventário. Estes links levam à publicação original, sem duplicar o conteúdo antes da revisão.",
+      "response": "Este é a parte do meu jardim digital que mais tenho apreço. É onde guardo minhas escrituras, tudo de minha autoria. Sem IA generativa.",
       "links": [
         {
           "title": "Publicações deste site",
-          "summary": "Lista de textos publicados diretamente no site pessoal.",
+          "summary": "Lista de textos publicados diretamente no site pessoal. (zerado ainda)",
           "url": "posts/index.html",
           "label": "Abrir publicações",
           "primary": false
