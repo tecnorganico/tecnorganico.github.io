@@ -74,3 +74,10 @@ O site não depende de servidor, banco de dados ou backend. Todos os caminhos s�
 - verificação de que a implementação não usa rolagem horizontal;
 - inventário manual das páginas autorizadas do WriteFreely e seus metadados;
 - nenhum deploy, commit ou push realizado.
+
+
+## Publicação oficial — 19/10/2026
+
+Site: https://tecnorganico.github.io/. GitHub Pages usa GitHub Actions, com deploy exclusivo de master após build e QA. Para editar em produção no Pages CMS, selecione master, edite e salve. Acompanhe a execução na aba Actions; cms-test não publica. Rascunhos no repositório público continuam acessíveis no GitHub, embora excluídos do site gerado.
+
+Lançamento aa133c6: https://github.com/tecnorganico/tecnorganico.github.io/actions/runs/39203141459. Pós-deploy: 46 testes aprovados, 40 contra a URL pública e seis com fixtures locais.

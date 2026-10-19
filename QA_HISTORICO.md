@@ -92,3 +92,14 @@ Os resultados desta entrada são QA automatizado. Inspeção visual e validaçã
 - **Artefato:** inclui somente `index.html`, `style.css`, `script.js`, `content/site.json`, fontes/licença, imagens referenciadas pelo conteúdo público e `posts/`; imagens de teste não referenciadas, testes, documentação, CMS, scripts, dependências e caches ficam fora.
 - **Resultado:** 23 testes Chromium contra o artefato e 8 testes de publicações em Chromium/móvel aprovados. A transição publicado→rascunho→exclusão removeu a página do build seguinte.
 - **Deploy:** não executado. O workflow futuro usa `upload-pages-artifact@v4` e `deploy-pages@v4`, mas a ativação da fonte Actions no Settings do GitHub Pages continua manual e pendente.
+
+
+## 2026-10-19 — Site pessoal publicado no GitHub Pages
+
+Lançamento autorizado diretamente por Raffael e executado pelo Codex após limite do Copilot. URL: https://tecnorganico.github.io/. Fonte alterada de legacy para workflow antes da integração fast-forward de cms-test em master. Commit publicado: aa133c6; versão anterior preservada no histórico: b28adda24f1d24633db6f8e68d5b2d4c76cce966.
+
+Validação remota de cms-test: https://github.com/tecnorganico/tecnorganico.github.io/actions/runs/39203007287. Build e deploy de master concluídos com sucesso: https://github.com/tecnorganico/tecnorganico.github.io/actions/runs/39203141459. Workflow validado com actionlint. Corrigido teste que exigia coleção sempre vazia e bloquearia o primeiro artigo real.
+
+Verificação pós-deploy: 46 testes aprovados em 16,1 s, Chromium e Chromium móvel. 40 cenários acessaram a URL pública; seis verificações de fixtures/gerador foram locais. Não confundir emulação com aparelho real. Não há artigo autoral publicado: a página individual foi verificada com fixture local.
+
+Para editar oficialmente: selecionar master no Pages CMS; salvar cria commit e inicia build, QA e deploy. cms-test continua sendo teste e não publica. O primeiro salvamento de produção pelo CMS ainda não foi realizado nesta etapa. Imagens de teste preservadas no repositório e excluídas do artefato por ausência de referência pública. Conteúdo editorial da trajetória e projetos continua passível de revisão, sem inventar informações.
