@@ -65,3 +65,13 @@ Os resultados desta entrada são QA automatizado. Inspeção visual e validaçã
 - **Upload:** a primeira tentativa relatada apresentou erro, mas a causa permanece desconhecida por falta da mensagem exata. A segunda tentativa foi relatada como bem-sucedida e confirmada pelos commits de mídia e pela associação no artigo. Também chegaram ao repositório duas imagens adicionais de tentativas anteriores (`8fcd050` e `020f99c`); elas não foram removidas nesta etapa.
 - **Verificação local:** após fast-forward até `d961514`, o parser confirmou `draft: true` e a imagem; o build com `content/posts` gerou zero publicações e não incluiu o título ou o caminho da imagem no índice. Os 6 testes focados de publicações passaram em Chromium e Chromium móvel.
 - **Configuração:** a documentação oficial atual descreve `options.media: images` em campos de imagem, enquanto o schema existente usa `media: images` diretamente. Como o upload posterior funcionou, nenhuma alteração de configuração foi feita; a compatibilidade deve ser reavaliada se o erro persistir.
+
+## 2026-10-19 00:06 — edição do rascunho pelo Pages CMS
+
+- **Operação real no Pages CMS:** o resumo de `Rascunho de teste do CMS` foi atualizado e salvo na branch `cms-test`.
+- **Commit confirmado:** `507456173d2bab063fe4dd5435c8af45ee0e0e65` (`content(update): content/posts/rascunho-de-teste-do-cms.md`).
+- **Campo alterado:** `summary` passou a ser `Texto fictício atualizado para verificar a edição pelo CMS.`.
+- **Campos preservados:** slug, categoria, corpo, imagem, `image_alt` e `draft: true`.
+- **Sincronização:** a cópia local foi atualizada por fast-forward até o mesmo commit, sem descarte de alterações.
+- **QA:** o build gerou somente `index.html`; não houve página individual nem presença do título/resumo na listagem. Os 6 testes focados passaram em Chromium e Chromium móvel.
+- **Limite:** a exclusão do rascunho pelo painel ainda não foi executada; o arquivo permanece intencionalmente no GitHub e marcado como rascunho.
