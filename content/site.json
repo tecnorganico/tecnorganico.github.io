@@ -98,6 +98,7 @@
           "title": "WhatsApp — contato principal",
           "url": "https://wa.me/5521977229377",
           "label": "Conversar comigo (abrir WhatsApp)",
+          "address": "5521977229377",
           "primary": true
         },
         {
@@ -116,7 +117,6 @@
         },
         {
           "title": "E-mail",
-          "summary": "raffael@cuidadosdigitais.com.br",
           "url": "mailto:raffael@cuidadosdigitais.com.br",
           "label": "Enviar e-mail",
           "address": "raffael@cuidadosdigitais.com.br",
