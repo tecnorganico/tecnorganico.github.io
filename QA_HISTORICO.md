@@ -39,3 +39,13 @@ Os resultados desta entrada são QA automatizado. Inspeção visual e validaçã
 - **Isolamento:** a referência remota de `master` permaneceu em `b28adda24f1d24633db6f8e68d5b2d4c76cce966`; o GitHub Pages continua configurado para publicar somente `master` pela raiz, em modo legado.
 - **Automação:** não houve execução de workflow para `cms-test`. O push enviou arquivos ao GitHub, mas não publicou o site.
 - **Estado do CMS:** ainda não validado. Falta autorizar o Pages CMS, editar um texto pelo painel e confirmar o commit gerado. Upload de imagens, criação de artigos e automação de publicação continuam pendências separadas.
+
+## 2026-10-18 23:33 — primeira edição real pelo Pages CMS
+
+- **Resultado:** validação parcial confirmada. O painel carregou a branch `cms-test` e exibiu a confirmação `File "content/site.json" saved successfully`.
+- **Commit remoto:** `94d7a366dc04af89878a971fae6a92338ee48706`, com a mensagem `content(update): content/site.json`.
+- **Campos alterados:** `identity.signature` passou de `Vida, técnica e palavra.` para `Autonomia digital se faz em coletivo`; `photo.src` passou a usar `/assets/media/raffael-baptista.jpeg`; o CMS acrescentou `primary: false` aos links que não são o contato principal e reorganizou alguns campos de contato sem alterar seus endereços.
+- **Sincronização:** a cópia local foi atualizada por fast-forward, sem descartar alterações pendentes. `npm run build:posts` continuou gerando zero publicações próprias.
+- **Prévia:** o novo valor da assinatura foi carregado em computador e celular emulado; a fotografia e seu texto alternativo permaneceram presentes.
+- **QA:** 36 testes focados passaram. Dois testes falharam porque a expectativa automatizada ainda protege a assinatura editorial anterior; a falha torna visível uma decisão editorial alterada pelo painel e não foi escondida nem corrigida automaticamente.
+- **Escopo validado:** edição e commit de `content/site.json` pelo Pages CMS. Upload de imagens, criação de artigos e automação de build/publicação continuam pendências independentes.
