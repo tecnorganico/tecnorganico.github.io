@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const { publicPosts } = require("./build-posts");
 
 const root = path.resolve(__dirname, "..");
 const outputDir = path.resolve(process.argv[2] || path.join(root, "_site"));
@@ -9,6 +10,11 @@ const files = [
   "style.css",
   "script.js",
   "content/site.json",
+];
+const assetFiles = [
+  "assets/IBMPlexSans-Medium.ttf",
+  "assets/IBMPlexSans-Regular.ttf",
+  "assets/OFL.txt",
 ];
 
 function copy(source, destination) {
@@ -24,7 +30,23 @@ function prepareSite() {
     copy(path.join(root, relativePath), path.join(outputDir, relativePath));
   }
 
-  fs.cpSync(path.join(root, "assets"), path.join(outputDir, "assets"), { recursive: true });
+  for (const relativePath of assetFiles) {
+    copy(path.join(root, relativePath), path.join(outputDir, relativePath));
+  }
+
+  const site = JSON.parse(fs.readFileSync(path.join(root, "content/site.json"), "utf8"));
+  const referencedImages = new Set([
+    site.photo?.src,
+    ...publicPosts().map((post) => post.image),
+  ].filter(Boolean));
+  for (const imagePath of referencedImages) {
+    const relativePath = imagePath.replace(/^\/+/, "");
+    if (!relativePath.startsWith("assets/media/")) {
+      throw new Error(`Imagem fora de assets/media: ${imagePath}`);
+    }
+    copy(path.join(root, relativePath), path.join(outputDir, relativePath));
+  }
+
   fs.cpSync(path.join(root, "posts"), path.join(outputDir, "posts"), { recursive: true });
 
   console.log(`Prepared site artifact in ${outputDir}`);

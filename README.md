@@ -46,7 +46,7 @@ Abra `http://127.0.0.1:8000/`.
 
 ## Build e publicação futura
 
-- `npm run build:artifact` gera `posts/` e monta o artefato mínimo em `_site/`, contendo somente a entrada do site, estilos, comportamento, `content/site.json`, assets e páginas de publicações geradas.
+- `npm run build:artifact` gera `posts/` e monta o artefato mínimo em `_site/`, contendo somente a entrada do site, estilos, comportamento, `content/site.json`, fontes/licença, imagens referenciadas pelo conteúdo público e páginas de publicações geradas. Imagens de teste não referenciadas ficam fora.
 - O workflow `.github/workflows/pages.yml` instala dependências com `npm ci`, instala Chromium, gera o artefato, executa o QA contra `_site/` e interrompe antes do upload se uma verificação falhar.
 - O workflow só pode executar build/deploy quando `github.ref` é `refs/heads/master`; `cms-test` não dispara publicação, inclusive por execução manual.
 - O deploy usa `actions/upload-pages-artifact` e `actions/deploy-pages`, sem commitar os arquivos gerados.

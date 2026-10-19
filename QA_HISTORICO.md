@@ -89,6 +89,6 @@ Os resultados desta entrada são QA automatizado. Inspeção visual e validaçã
 
 - **Configuração real:** GitHub Pages continua em modo `legacy`, branch `master`, raiz `/`; nenhuma configuração de produção foi alterada.
 - **Implementação local em `cms-test`:** `.github/workflows/pages.yml` usa `npm ci`, gera publicações, monta `_site/` por lista explícita, testa o artefato com Chromium e só permite os jobs quando `github.ref` é `refs/heads/master`.
-- **Artefato:** inclui somente `index.html`, `style.css`, `script.js`, `content/site.json`, `assets/` e `posts/`; testes, documentação, CMS, scripts, dependências e caches ficam fora.
+- **Artefato:** inclui somente `index.html`, `style.css`, `script.js`, `content/site.json`, fontes/licença, imagens referenciadas pelo conteúdo público e `posts/`; imagens de teste não referenciadas, testes, documentação, CMS, scripts, dependências e caches ficam fora.
 - **Resultado:** 23 testes Chromium contra o artefato e 8 testes de publicações em Chromium/móvel aprovados. A transição publicado→rascunho→exclusão removeu a página do build seguinte.
 - **Deploy:** não executado. O workflow futuro usa `upload-pages-artifact@v4` e `deploy-pages@v4`, mas a ativação da fonte Actions no Settings do GitHub Pages continua manual e pendente.
