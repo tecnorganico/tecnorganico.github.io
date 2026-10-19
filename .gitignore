@@ -1,0 +1,7 @@
+# Added by code-review-graph
+.code-review-graph/
+.playwright/
+playwright-report/
+test-results/
+
+node_modules/

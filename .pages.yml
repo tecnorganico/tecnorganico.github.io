@@ -1,0 +1,184 @@
+media:
+  - name: images
+    label: Imagens do site
+    input: assets/media
+    output: /assets/media
+    categories:
+      - image
+    extensions:
+      - jpg
+      - jpeg
+      - png
+      - webp
+    rename: safe
+
+content:
+  - name: site
+    label: Site pessoal — identidade e seções
+    type: file
+    path: content/site.json
+    format: json
+    fields:
+      - name: greeting
+        label: Saudação inicial
+        type: string
+        description: Texto exibido na primeira mensagem da conversa.
+      - name: introduction
+        label: Biografia de abertura
+        type: text
+        description: Biografia curta exibida na apresentação inicial.
+      - name: identity
+        label: Nome e assinaturas
+        type: object
+        fields:
+          - name: name
+            label: Nome público
+            type: string
+          - name: subtitle
+            label: Subtítulo do cabeçalho
+            type: string
+          - name: signature
+            label: Assinatura editorial
+            type: string
+      - name: photo
+        label: Fotografia do perfil
+        type: object
+        fields:
+          - name: src
+            label: Selecionar fotografia
+            type: image
+            media: images
+          - name: alt
+            label: Texto alternativo
+            type: text
+          - name: credit
+            label: Crédito da fotografia
+            type: text
+      - name: paths
+        label: Seções da conversa
+        type: object
+        list: true
+        description: Edite uma seção sem alterar as demais. Os IDs existentes sustentam a navegação.
+        fields:
+          - name: id
+            label: Identificador técnico
+            type: string
+            readonly: true
+          - name: label
+            label: Nome da seção
+            type: string
+          - name: response
+            label: Apresentação da seção
+            type: text
+          - name: reading
+            label: Área de leitura
+            type: object
+            required: false
+            fields:
+              - name: title
+                label: Título da leitura
+                type: string
+              - name: text
+                label: Texto introdutório
+                type: text
+              - name: points
+                label: Pontos da leitura
+                type: string
+                list: true
+          - name: links
+            label: Links e referências
+            type: object
+            list: true
+            required: false
+            fields:
+              - name: title
+                label: Nome do link
+                type: string
+              - name: summary
+                label: Descrição do link
+                type: text
+              - name: date
+                label: Data editorial
+                type: string
+                required: false
+              - name: url
+                label: Endereço do link
+                type: string
+              - name: label
+                label: Texto do botão
+                type: string
+              - name: address
+                label: Endereço copiável
+                type: string
+                required: false
+              - name: primary
+                label: Contato principal
+                type: boolean
+                required: false
+
+  - name: publications
+    label: Publicações — blogue
+    type: collection
+    path: content/posts
+    format: yaml-frontmatter
+    filename: "{slug}.md"
+    exclude:
+      - README.md
+    view:
+      primary: title
+      sort: date
+      order: desc
+      search:
+        - title
+        - summary
+        - categories
+    fields:
+      - name: title
+        label: Título
+        type: string
+        required: true
+      - name: slug
+        label: Endereço permanente
+        type: string
+        required: true
+        pattern: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        description: Apenas letras minúsculas, números e hífens.
+      - name: date
+        label: Data editorial
+        type: date
+        required: true
+      - name: summary
+        label: Resumo
+        type: text
+        required: true
+      - name: categories
+        label: Categorias
+        type: string
+        list: true
+      - name: image
+        label: Imagem opcional
+        type: image
+        media: images
+        required: false
+      - name: image_alt
+        label: Texto alternativo da imagem
+        type: text
+        required: false
+      - name: draft
+        label: Rascunho — não publicar
+        type: boolean
+        description: Rascunhos ficam fora da geração, da listagem e da busca do site. O arquivo ainda será acessível no GitHub se enviado ao repositório público.
+      - name: body
+        label: Corpo do texto
+        type: rich-text
+        required: true
+
+settings:
+  content: true
+  commit:
+    identity: user
+    templates:
+      create: "content(create): {path}"
+      update: "content(update): {path}"
+      delete: "content(delete): {path}"
+      rename: "content(rename): {oldPath} -> {newPath}"

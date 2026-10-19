@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="classic">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Publicações — Raffael Baptista">
+    <link rel="stylesheet" href="style.css">
+    <title>Publicações — Raffael Baptista</title>
+  </head>
+  <body>
+    <main class="post-main">
+      <a class="post-back" href="../#escritos">Voltar ao início</a>
+<h1>Publicações</h1>
+<label class="post-search">Buscar publicações
+  <input type="search" data-post-search placeholder="Título, resumo ou categoria">
+</label>
+<section data-post-list><p data-empty-posts>Ainda não há publicações próprias publicadas.</p></section>
+<script>
+const input = document.querySelector("[data-post-search]");
+const cards = [...document.querySelectorAll("[data-post]")];
+const empty = document.querySelector("[data-empty-posts]");
+input.addEventListener("input", () => {
+  const query = input.value.trim().toLowerCase();
+  let visible = 0;
+  cards.forEach((card) => {
+    const match = card.dataset.search.includes(query);
+    card.hidden = !match;
+    if (match) visible += 1;
+  });
+  if (empty) empty.hidden = visible > 0;
+});
+</script>
+    </main>
+  </body>
+</html>

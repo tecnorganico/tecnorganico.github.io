@@ -1,192 +1,57 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="classic">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Um espaço autoral de Raffael Baptista para escritos, projetos e contribuições.">
+    <link rel="me" href="https://bantu.social/@tecnorganico">
+    <link rel="stylesheet" href="style.css">
+    <title>Raffael Baptista — Tecnorgânico</title>
+  </head>
+  <body>
+    <div class="site-shell">
+      <aside class="side-nav" aria-label="Navegação principal">
+        <a class="brand" href="./" data-reset>
+          <span class="brand-mark"><img src="assets/media/raffael-baptista.jpeg" alt="Raffael Baptista sorrindo, de óculos, diante de um fundo laranja. Fotografia autoral de Raffael Baptista, editada utilizando GPT-5.1."></span>
+          <span>
+            <strong data-site-name>Raffael Baptista</strong>
+            <small data-site-signature>Vida, técnica e palavra.</small>
+          </span>
+        </a>
+        <nav>
+          <a href="#conversa" data-nav="home">Início</a>
+          <a href="#trajetoria" data-nav="trajetoria">Minha trajetória</a>
+          <a href="#escritos" data-nav="escritos">Ler meus escritos</a>
+          <a href="#projetos" data-nav="projetos">Conhecer os projetos</a>
+          <a href="#contato" data-nav="contato">Falar comigo</a>
+        </nav>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Mudar tema visual">mudar tema</button>
+      </aside>
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<a rel="me" href="https://bantu.social/@tecnorganico"></a>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ramires, o Tecnorgânico Nerd de Aluguel</title>
-<style>
-  :root{
-    --bg:#0d0f0c;
-    --panel:#151812;
-    --ink:#e7 efe0;
-    --ink:#e7efe0;
-    --muted:#9db08c;
-    --accent:#7fc15b;
-    --accent-2:#c9e265;
-    --line:#2a3122;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{
-    background:
-      radial-gradient(1200px 600px at 50% -10%, #1b2415 0%, transparent 60%),
-      var(--bg);
-    color:var(--ink);
-    font-family:"Courier New",ui-monospace,SFMono-Regular,Menlo,monospace;
-    line-height:1.6;
-    padding:2rem 1rem 4rem;
-    min-height:100vh;
-  }
-  .wrap{max-width:640px;margin:0 auto}
+      <main class="chat-main">
+        <header class="chat-header">
+          <div class="avatar"><img data-site-photo src="assets/media/raffael-baptista.jpeg" alt="Raffael Baptista sorrindo, de óculos, diante de um fundo laranja. Fotografia autoral de Raffael Baptista, editada utilizando GPT-5.1."></div>
+          <div>
+            <h1 class="identity-name" data-site-name>Raffael Baptista</h1>
+            <p class="identity-subtitle" data-site-subtitle>Autonomia digital se faz em coletivo</p>
+          </div>
+          <button class="mobile-theme-toggle" type="button" data-theme-toggle aria-label="Mudar tema visual">tema</button>
+        </header>
 
-  header{text-align:center;margin-bottom:2.5rem}
-  .avatar{
-    width:96px;height:96px;border-radius:50%;
-    margin:0 auto 1rem;
-    background:linear-gradient(135deg,var(--accent),var(--accent-2));
-    display:flex;align-items:center;justify-content:center;
-    font-size:2.2rem;color:#0d0f0c;font-weight:bold;
-    box-shadow:0 0 0 4px var(--line);
-  }
-  h1{font-size:1.7rem;letter-spacing:.5px;margin-bottom:.6rem}
-  .tagline{
-    color:var(--accent-2);
-    font-size:.95rem;
-    max-width:34ch;margin:0 auto;
-  }
-  .tagline span{color:var(--muted)}
+        <section id="conversa" class="conversation" aria-label="Conversa principal" aria-live="polite">
+          <div class="conversation-inner" data-conversation></div>
+        </section>
 
-  section{margin:2.2rem 0}
-  h2{
-    font-size:1.05rem;
-    color:var(--accent);
-    border-bottom:1px dashed var(--line);
-    padding-bottom:.4rem;margin-bottom:1rem;
-    letter-spacing:.5px;
-  }
-
-  a.card{
-    display:block;
-    background:var(--panel);
-    border:1px solid var(--line);
-    border-radius:12px;
-    padding:.95rem 1.1rem;
-    margin-bottom:.75rem;
-    color:var(--ink);
-    text-decoration:none;
-    transition:transform .12s ease,border-color .12s ease,background .12s ease;
-  }
-  a.card:hover{
-    transform:translateY(-2px);
-    border-color:var(--accent);
-    background:#1a1f14;
-  }
-  a.card .t{font-weight:bold;display:block}
-  a.card .d{color:var(--muted);font-size:.85rem;margin-top:.3rem;display:block}
-
-  ul.notes{list-style:none}
-  ul.notes li{
-    padding:.5rem .9rem;
-    border-left:2px solid var(--accent);
-    background:var(--panel);
-    margin-bottom:.5rem;
-    border-radius:0 8px 8px 0;
-    color:var(--muted);
-    font-size:.9rem;
-  }
-
-  .contacts{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center}
-  .contacts a{
-    flex:1 1 40%;
-    text-align:center;
-    background:var(--panel);
-    border:1px solid var(--line);
-    border-radius:10px;
-    padding:.7rem;
-    color:var(--ink);
-    text-decoration:none;
-    font-size:.9rem;
-    transition:border-color .12s ease,background .12s ease;
-  }
-  .contacts a:hover{border-color:var(--accent);background:#1a1f14}
-
-  footer{
-    text-align:center;margin-top:3rem;
-    color:var(--muted);font-size:.8rem;
-    border-top:1px dashed var(--line);padding-top:1.2rem;
-  }
-</style>
-</head>
-<body>
-<div class="wrap">
-
-  <header>
-    <div class="avatar">🌱</div>
-    <h1>Rafael Ramires Baptista</h1>
-    <p class="tagline">
-     ⁕ Escrevedor e nerd autoproclamado ⁕ 💍 casado & pai de família ⁕ para contato & conteúdo👇🏽
-    </p>
-  </header>
-
-  <!-- ESCRITAS -->
-    <section>
-    <h2>✍🏽 fontes & links dos posts das redes sociais </h2>
-    <a class="card" href="https://blog.bantu.social/tecnorganico/comic-sans-ainda-mora-aqui" target="_blank" rel="noopener">
-      <span class="t">Comic Sans ainda mora aqui</span>
-      <span class="d">Comic Sans, Fediverso e #tersoftware</span>
-    </a>
-    <a class="card" href="https://blog.bantu.social/tecnorganico/o-tedio-voltou" target="_blank" rel="noopener">
-      <span class="t">O Tédio Voltou</span>
-      <span class="d">Tédio e 48 offline</span>
-    </a>
-  </section>
-  <section>
-    <h2>✍🏽 escritas</h2>
-    <a class="card" href="https://blog.bantu.social/tecnorganico/" target="_blank" rel="noopener">
-      <span class="t">Ramificando Pensações</span>
-      <span class="d">Jardim digital de Tecnorgânico, vulgo Ramires. Pequeno terreno nesse latifúndio digital pouco simpático. Contém divulgação de trabalho.</span>
-    </a>
-  </section>
-
-
-  <!-- LABORALIDADES -->
-  <section>
-    <h2>🛠️ laboralidades &amp; curriculum 📄</h2>
-    <a class="card" href="https://blog.bantu.social/tecnorganico/sobre" target="_blank" rel="noopener">
-      <span class="t">📂 ensaio laboral</span>
-      <span class="d">Há alguns anos venho trabalhando com informática, comecei na montagem e manutenção de computadores, trabalhei com provedores de internet…</span>
-    </a>
-    <a class="card" href="https://tecnorganico.neocities.org/rriculo" target="_blank" rel="noopener">
-      <span class="t">📄 curriculum</span>
-      <span class="d">tecnorganico.neocities.org</span>
-    </a>
-  </section>
-
-  <!-- PERIFERIAS DIGITAIS -->
-  <section>
-    <h2>🖥️ periferias digitais</h2>
-    <a class="card" href="https://pixelfed.social/esquecidinho" target="_blank" rel="noopener">
-      <span class="t">📸 Pixelfed &gt; Instagram do Bem</span>
-      <span class="d">@esquecidinho@pixelfed.social</span>
-    </a>
-    <a class="card" href="https://bantu.social/@tecnorganico" target="_blank" rel="noopener">
-      <span class="t">🐤 Mastodon → Bluesky de Quebrada</span>
-      <span class="d">@tecnorganico@bantu.social — 💅🏽 gosto de bairros, cultura e código aberto. amo minha esposa e minhas criança.</span>
-    </a>
-  </section>
-
-  <!-- CONTATOS -->
-  <section>
-    <h2>📬 contatos &amp; redes</h2>
-    <div class="contacts">
-      <a href="mailto:ramires@cuidadosdigitais.com.br">✉️ imeio</a>
-      <a href="https://wa.me/5521977229377" target="_blank" rel="noopener">💬 zap</a>
-      <a href="https://bantu.social/@tecnorganico" target="_blank" rel="noopener">🐘 mastodon</a>
-      <a href="https://github.com/tecnorganico" target="_blank" rel="noopener">🐙 github</a>
-      <a href="https://www.youtube.com/@tecnorganico" target="_blank" rel="noopener">▶️ YouTube</a>
-      <a href="https://instagram.com/tecnorganico" target="_blank" rel="noopener">📷 insta</a>
+        <footer class="navigation-bar">
+          <p class="navigation-hint">Escolha um caminho para continuar.</p>
+          <div class="choice-grid" data-choices></div>
+          <button class="reset-button" type="button" data-reset>voltar ao início</button>
+        </footer>
+      </main>
     </div>
-  </section>
-
-  <footer>
-    <p>desde 1996, trabalhando desde os 11. apoio: Nós Mermo.</p>
-    <p>feito com autonomia digital 🌱 por tecnorgânico & companhia</p>
-    <p>página artesanal nas prateleiras da Neocities. faça seu site de graça por lá também! clique no gatinho de pincel.</p>
-    <a href="https://neocities.org" target="_blank" aria-label="Crie gratuitamente seu site também com Neocities"> <img src="https://tecnorganico.neocities.org/neocities.png" alt="Neocities logo, uma raposinha comum pincel e uma chave 14 na mão, dando a linguinha, com um bonézin amarelo e as orelinha pra fora." ></a>
-  </footer>
-
-</div>
-</body>
+    <noscript>
+      <p class="noscript">Este protótipo precisa de JavaScript para apresentar os caminhos da conversa.</p>
+    </noscript>
+    <script src="script.js"></script>
+  </body>
 </html>

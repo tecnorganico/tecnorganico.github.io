@@ -1,0 +1,13 @@
+{
+  "name": "tecnorganico-site",
+  "private": true,
+  "scripts": {
+    "qa": "npm run build:posts && playwright test",
+    "qa:report": "playwright show-report",
+    "build:posts": "node scripts/build-posts.js"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
+    "@playwright/test": "^1.55.0"
+  }
+}

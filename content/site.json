@@ -1,0 +1,151 @@
+{
+  "greeting": "Oi, eu sou o Raffael. Que bom ter você por aqui.",
+  "introduction": "Pode me chamar de Raffael, atuo como educador que trabalha com tecnologia e escreve o mundo a partir da Baixada Fluminense. Meu trabalho aproxima educação, autonomia digital e território. Aqui reúno textos, projetos e colaborações que fiz e faço ao longo da minha trajetória.",
+  "identity": {
+    "name": "Raffael Baptista",
+    "subtitle": "Autonomia digital se faz em coletivo",
+    "signature": "Vida, técnica e palavra."
+  },
+  "photo": {
+    "src": "assets/media/raffael-baptista.jpeg",
+    "alt": "Raffael Baptista sorrindo, de óculos, diante de um fundo laranja. Fotografia autoral de Raffael Baptista, editada utilizando GPT-5.1.",
+    "credit": "Fotografia de Raffael Baptista, editada utilizando GPT-5.1."
+  },
+  "paths": [
+    {
+      "id": "trajetoria",
+      "label": "Minha trajetória",
+      "response": "A trajetória está descrita em uma página autoral no blog Ramificando Pensações. Ela reúne educação popular, tecnologia, pesquisa e autonomia digital.",
+      "reading": {
+        "title": "Minha trajetória",
+        "text": "A versão publicada aqui ainda depende de revisão editorial de Raffael. Por enquanto, a fonte autorizada é a página “sobre” do blog.",
+        "points": [
+          "educação popular, tecnologia e pesquisa;",
+          "Baixada Fluminense como território de origem;",
+          "Nerd de Aluguel, Cuidados Digitais, InfoCria e outras experiências citadas na fonte."
+        ]
+      },
+      "links": [
+        {
+          "title": "Fonte autorizada: sobre",
+          "summary": "Texto biográfico e profissional hospedado no blog Ramificando Pensações.",
+          "url": "https://blog.bantu.social/tecnorganico/sobre",
+          "label": "Ler no blog"
+        }
+      ]
+    },
+    {
+      "id": "escritos",
+      "label": "Ler meus escritos",
+      "response": "Os textos ainda estão em inventário. Estes links levam à publicação original, sem duplicar o conteúdo antes da revisão.",
+      "links": [
+        {
+          "title": "Publicações deste site",
+          "summary": "Lista de textos publicados diretamente no site pessoal.",
+          "url": "posts/index.html",
+          "label": "Abrir publicações"
+        },
+        {
+          "title": "Comic Sans ainda mora aqui",
+          "summary": "Memória visual, Comic Sans, fediverso, #tersoftware e a conversa sobre fontes.",
+          "date": "26 de agosto de 2026",
+          "url": "https://blog.bantu.social/tecnorganico/comic-sans-ainda-mora-aqui",
+          "label": "Abrir texto original"
+        },
+        {
+          "title": "O tédio voltou",
+          "summary": "Um convite editorial para passar 48 horas fora do feed, com limites e referências de estudos.",
+          "date": "24 de agosto de 2026",
+          "url": "https://blog.bantu.social/tecnorganico/o-tedio-voltou",
+          "label": "Abrir texto original"
+        },
+        {
+          "title": "Ramificando Pensações",
+          "summary": "Jardim digital e arquivo de textos do Tecnorgânico.",
+          "url": "https://blog.bantu.social/tecnorganico/",
+          "label": "Abrir o arquivo"
+        }
+      ]
+    },
+    {
+      "id": "projetos",
+      "label": "Conhecer os projetos",
+      "response": "Os nomes abaixo aparecem nas fontes consultadas, mas a situação de cada projeto ainda precisa ser confirmada antes de virar portfólio.",
+      "reading": {
+        "title": "Projetos e contribuições",
+        "text": "Não vou transformar menções em descrições definitivas sem a revisão de Raffael. A organização inicial separa universos autorais e frentes de trabalho para facilitar essa decisão.",
+        "points": [
+          "Tecnorgânico: universo autoral;",
+          "Nerd de Aluguel: suporte técnico humanizado;",
+          "Cuidados Digitais: tema e frente de educação em segurança e privacidade;",
+          "InfoCria: construção coletiva de autonomia digital."
+        ]
+      }
+    },
+    {
+      "id": "contato",
+      "label": "Falar comigo",
+      "response": "O WhatsApp é o contato principal. Você também pode falar comigo pelo Signal e pelo Telegram, além dos outros canais abaixo.",
+      "links": [
+        {
+          "title": "WhatsApp — contato principal",
+          "summary": "Conversar comigo pelo WhatsApp.",
+          "url": "https://wa.me/5521977229377",
+          "label": "Conversar comigo (abrir WhatsApp)",
+          "primary": true
+        },
+        {
+          "title": "Signal",
+          "summary": "Você também pode falar comigo pelo Signal.",
+          "url": "https://signal.me/#p/+5521977229377",
+          "label": "Abrir Signal"
+        },
+        {
+          "title": "Telegram",
+          "summary": "Você também pode falar comigo pelo Telegram.",
+          "url": "https://t.me/+5521977229377",
+          "label": "Abrir Telegram"
+        },
+        {
+          "title": "E-mail",
+          "summary": "raffael@cuidadosdigitais.com.br",
+          "url": "mailto:raffael@cuidadosdigitais.com.br",
+          "address": "raffael@cuidadosdigitais.com.br",
+          "label": "Enviar e-mail"
+        },
+        {
+          "title": "XMPP",
+          "summary": "Endereço copiável para conversas XMPP.",
+          "url": "xmpp:imbariense@conversations.im?message",
+          "address": "imbariense@conversations.im",
+          "label": "Abrir XMPP"
+        },
+        {
+          "title": "Matrix",
+          "summary": "Endereço copiável para conversas Matrix.",
+          "url": "https://matrix.to/#/@imbariense:matrix.org",
+          "address": "@imbariense:matrix.org",
+          "label": "Abrir Matrix"
+        },
+        {
+          "title": "Mastodon",
+          "summary": "@tecnorganico@bantu.social",
+          "url": "https://bantu.social/@tecnorganico",
+          "label": "Abrir perfil"
+        },
+        {
+          "title": "WriteFreely",
+          "summary": "Arquivo de textos e publicações.",
+          "url": "https://blog.bantu.social/tecnorganico/",
+          "label": "Abrir arquivo"
+        },
+        {
+          "title": "Pixelfed",
+          "summary": "Perfil @esquecidinho.",
+          "url": "https://pixelfed.social/esquecidinho",
+          "label": "Abrir perfil"
+        }
+      ]
+    }
+  ]
+}
