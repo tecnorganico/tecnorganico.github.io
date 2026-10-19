@@ -29,3 +29,13 @@ Os resultados desta entrada são QA automatizado. Inspeção visual e validaçã
 - **Verificações:** rascunho excluído da saída, listagem e busca; publicação de fixture renderizada em página individual; link direto de retorno; listagem pública sem artigos inventados; axe-core na listagem.
 - **Conteúdo:** nenhum artigo do WriteFreely foi copiado. Os links externos aprovados foram preservados; a coleção começa sem publicações próprias.
 - **Limitação:** a integração autenticada do Pages CMS não foi testada. O build local (`npm run build:posts`) ainda precisa ser executado em branch/workflow antes de uma publicação que inclua novos posts.
+
+## 2026-10-18 22:26 — branch isolada para teste do Pages CMS
+
+- **Branch enviada:** `cms-test`.
+- **Commit da estrutura enviada:** `1017bb4595b1a53ee31171f10197a1b5b4b0ab55` (`feat: prepare Pages CMS test branch`).
+- **Conteúdo:** estrutura editorial, `.pages.yml`, fotografia aprovada, coleção Markdown, gerador, testes, documentação e dependências declaradas; `node_modules`, caches, relatórios e registros privados ficaram fora do commit.
+- **Verificações antes do envio:** `npm run qa` com 88 testes aprovados em Chromium, Firefox, WebKit e Chromium móvel; `npm run build:posts`; validação do JSON, sintaxe JavaScript, credenciais e `git diff --check`.
+- **Isolamento:** a referência remota de `master` permaneceu em `b28adda24f1d24633db6f8e68d5b2d4c76cce966`; o GitHub Pages continua configurado para publicar somente `master` pela raiz, em modo legado.
+- **Automação:** não houve execução de workflow para `cms-test`. O push enviou arquivos ao GitHub, mas não publicou o site.
+- **Estado do CMS:** ainda não validado. Falta autorizar o Pages CMS, editar um texto pelo painel e confirmar o commit gerado. Upload de imagens, criação de artigos e automação de publicação continuam pendências separadas.

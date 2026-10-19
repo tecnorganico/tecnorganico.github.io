@@ -19,7 +19,7 @@ Não havia `package.json`, framework, bundler, workflow de publicação ou geren
 - Mantive os arquivos históricos em `anotado/` e `bagulhos/`; eles não são apagados nem republicados automaticamente.
 - Adicionei `.pages.yml` na raiz para permitir edição futura pelo Pages CMS.
 - Não copiei integralmente os textos do WriteFreely. Os links e metadados inventariados estão em `MIGRACAO_DE_CONTEUDO.md`, aguardando revisão humana.
-- Não publiquei, fiz commit ou enviei alterações ao GitHub nesta etapa.
+- A implementação foi enviada somente à branch isolada `cms-test` para teste do Pages CMS; `master` não foi alterada e o site não foi publicado por essa operação.
 
 ## Executar localmente
 
