@@ -38,12 +38,13 @@
     },
     {
       "id": "escritos",
-      "label": "Ler meus escritos",
+      "label": "Escritos",
       "response": "Este é a parte do meu jardim digital que mais tenho apreço. É onde guardo minhas escrituras, tudo de minha autoria. Sem IA generativa.",
       "links": [
         {
           "title": "Publicações",
           "summary": "Lista de textos publicados diretamente no site pessoal. (zerado ainda)",
+          "date": "19 de outubro de 2026",
           "url": "posts/index.html",
           "label": "Abrir publicações",
           "primary": false
