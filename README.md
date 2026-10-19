@@ -39,6 +39,7 @@ Abra `http://127.0.0.1:8000/`.
 - `script.js` contém somente a lógica de renderização e interação.
 - Execute a rotina completa de QA com `npm run qa`; ela abre o relatório HTML em `playwright-report/` e mantém resultados, capturas e traces regeneráveis fora do Git.
 - O `.pages.yml` descreve os campos editoriais de `content/site.json` para o Pages CMS; a edição pelo CMS gera commits no repositório e não publica nada sozinha fora do fluxo configurado pelo GitHub Pages. A edição de `content/site.json` foi validada na branch isolada `cms-test`; upload de imagens, criação de artigos e automação de build/publicação ainda não foram testados.
+- A sincronização posterior confirmou `cms-test` local no mesmo commit remoto, sem alterações locais pendentes; `master` continua isolada.
 - Publicações individuais ficam em `content/posts/*.md` e são geradas para `posts/*.html` por `npm run build:posts`. Apenas arquivos sem `draft: true` entram na listagem, busca e páginas públicas. O build é uma etapa local/reprodutível; para publicação futura será necessário executá-lo em uma branch de teste ou em um workflow antes de publicar pelo GitHub Pages.
 - O Pages CMS pode editar `content/site.json` (identidade, biografia, fotografia, trajetória, escritos, projetos e contatos) e criar arquivos Markdown em `content/posts/`. A configuração não autentica o CMS por si só. O repositório remoto ainda usa GitHub Pages legado; salvar no CMS cria commits, mas novos posts só aparecerão no site depois de `npm run build:posts` e da publicação dos arquivos gerados.
 

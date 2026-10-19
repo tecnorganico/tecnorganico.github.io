@@ -49,3 +49,10 @@ Os resultados desta entrada são QA automatizado. Inspeção visual e validaçã
 - **Prévia:** o novo valor da assinatura foi carregado em computador e celular emulado; a fotografia e seu texto alternativo permaneceram presentes.
 - **QA:** 36 testes focados passaram. Dois testes falharam porque a expectativa automatizada ainda protege a assinatura editorial anterior; a falha torna visível uma decisão editorial alterada pelo painel e não foi escondida nem corrigida automaticamente.
 - **Escopo validado:** edição e commit de `content/site.json` pelo Pages CMS. Upload de imagens, criação de artigos e automação de build/publicação continuam pendências independentes.
+
+## 2026-10-18 23:39 — sincronização pós-edição confirmada
+
+- **Sincronização:** `cms-test` local foi conferida com `origin/cms-test` no commit `714f56ecb7f0395a4e09b25b948929ca126e94c6`, sem alterações locais pendentes e sem uso de reset ou descarte.
+- **Conteúdo visível:** a prévia carregou `Raffael Baptista`, o subtítulo aprovado, a assinatura atualmente salva pelo CMS e a fotografia com o texto alternativo aprovado.
+- **Build:** `npm run build:posts` concluiu com zero publicações próprias; não houve publicação.
+- **Limites:** `master` permaneceu em `b28adda24f1d24633db6f8e68d5b2d4c76cce966`. Upload de imagens e criação/edição/exclusão de artigos continuam pendentes de teste.
