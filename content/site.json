@@ -132,7 +132,6 @@
         },
         {
           "title": "Matrix",
-          "summary": "Endereço copiável para conversas Matrix.",
           "url": "https://matrix.to/#/@imbariense:matrix.org",
           "label": "Abrir Matrix",
           "address": "@imbariense:matrix.org",
@@ -140,9 +139,9 @@
         },
         {
           "title": "Mastodon",
-          "summary": "@tecnorganico@bantu.social",
           "url": "https://bantu.social/@tecnorganico",
           "label": "Abrir perfil",
+          "address": "@tecnorganico@bantu.social",
           "primary": false
         },
         {
