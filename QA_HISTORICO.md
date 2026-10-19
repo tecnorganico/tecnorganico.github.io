@@ -56,3 +56,12 @@ Os resultados desta entrada são QA automatizado. Inspeção visual e validaçã
 - **Conteúdo visível:** a prévia carregou `Raffael Baptista`, o subtítulo aprovado, a assinatura atualmente salva pelo CMS e a fotografia com o texto alternativo aprovado.
 - **Build:** `npm run build:posts` concluiu com zero publicações próprias; não houve publicação.
 - **Limites:** `master` permaneceu em `b28adda24f1d24633db6f8e68d5b2d4c76cce966`. Upload de imagens e criação/edição/exclusão de artigos continuam pendentes de teste.
+
+## 2026-10-18 23:45 — publicação fictícia em rascunho e upload de imagem
+
+- **Operação real no Pages CMS:** foi criado na branch `cms-test` o artigo fictício `Rascunho de teste do CMS`, com o commit inicial `99d4d95` e atualização posterior `d961514`.
+- **Rascunho:** o arquivo remoto `content/posts/rascunho-de-teste-do-cms.md` contém `draft: true`, resumo, categoria, corpo fictício e permanece preservado para a etapa de limpeza posterior.
+- **Imagem associada:** o artigo contém `image: /assets/media/3fb993d9-fb7a-4d49-bc42-796b24ed5a22.jpeg` e `image_alt`; o arquivo existe no repositório e foi criado pelo CMS no commit `e350b4d`.
+- **Upload:** a primeira tentativa relatada apresentou erro, mas a causa permanece desconhecida por falta da mensagem exata. A segunda tentativa foi relatada como bem-sucedida e confirmada pelos commits de mídia e pela associação no artigo. Também chegaram ao repositório duas imagens adicionais de tentativas anteriores (`8fcd050` e `020f99c`); elas não foram removidas nesta etapa.
+- **Verificação local:** após fast-forward até `d961514`, o parser confirmou `draft: true` e a imagem; o build com `content/posts` gerou zero publicações e não incluiu o título ou o caminho da imagem no índice. Os 6 testes focados de publicações passaram em Chromium e Chromium móvel.
+- **Configuração:** a documentação oficial atual descreve `options.media: images` em campos de imagem, enquanto o schema existente usa `media: images` diretamente. Como o upload posterior funcionou, nenhuma alteração de configuração foi feita; a compatibilidade deve ser reavaliada se o erro persistir.
