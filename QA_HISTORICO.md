@@ -117,3 +117,11 @@ Para editar oficialmente: selecionar master no Pages CMS; salvar cria commit e i
 ### confirmação da publicação
 
 Commit 353857a publicado pelo workflow https://github.com/tecnorganico/tecnorganico.github.io/actions/runs/39518854700. Oito verificações pós-deploy passaram em 5,3 s, incluindo timeline, fotos, acessibilidade e disponibilidade condicional dos escritos. Os cenários zero/uma publicação usam manifesto simulado. README e fixture de rascunho retornaram 404 no site final. Fonte Pages encontrada em legacy durante a execução e restaurada para workflow; sem atribuir causa à mudança. A versão final usa o pacote filtrado.
+
+## 2026-10-20 — portfólio ampliado para 43 registros
+
+Incluídos Hand Talk TV (2022), capítulo em coautoria com Pietra Canle no livro da Desvelar/LiteraRUA (2025), artigo da Aman-Ti-Kyr (2023), Instituto Bola Pra Frente (2021), locais de atuação e outros projetos. Exibição somente de anos/intervalos de anos. Registros sem ano confirmado ficam em outros percursos, sem gerar datas artificiais.
+
+Confirmação direta de Raffael: Cineclube 2022–2025, como cineclubista e assistente de produção; AMAR em 2022, por seis meses. Informação autoral mais recente substitui o ano de 2021 do registro anterior. Fontes e limites em docs/2026-10-20_AMPLIACAO_DO_PORTFOLIO.md.
+
+Oito testes editoriais aprovados em 11,2 s antes da correção final de datas, em Chromium/computador e Chromium móvel: presença de todos os registros, fotos, link de vídeo, anos, acessibilidade, retorno ao início e escritos condicionais. YAML do CMS e workflow validados. Resultado remoto/pós-deploy será registrado após confirmação.

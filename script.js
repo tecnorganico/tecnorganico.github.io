@@ -115,7 +115,17 @@ function createTimeline(entries) {
   heading.textContent = "trabalhos e encontros pelo caminho";
   const list = document.createElement("ol");
   list.className = "timeline";
+  let undatedHeadingAdded = false;
   entries.forEach((entry) => {
+    if (!entry.date && !undatedHeadingAdded) {
+      const divider = document.createElement("li");
+      divider.className = "timeline-divider";
+      const label = document.createElement("h3");
+      label.textContent = "outros percursos";
+      divider.append(label);
+      list.append(divider);
+      undatedHeadingAdded = true;
+    }
     const item = document.createElement("li");
     const article = document.createElement("article");
     const date = document.createElement("time");
@@ -125,7 +135,8 @@ function createTimeline(entries) {
     title.textContent = entry.title;
     const description = document.createElement("p");
     description.textContent = entry.description;
-    article.append(date, title, description);
+    if (entry.date) article.append(date);
+    article.append(title, description);
     if (entry.image) {
       const figure = document.createElement("figure");
       const image = document.createElement("img");

@@ -65,7 +65,7 @@
       "response": "trabalhos, projetos e encontros que fazem parte do meu caminho entre educação, tecnologia e território.",
       "timeline": [
         {
-          "date": "2026-10-19",
+          "date": "2026",
           "period": "2026",
           "title": "site pessoal de Raffael Baptista",
           "description": "reúno meu portfólio e meus textos em um site de código aberto, com edição pelo Pages CMS e publicação no GitHub Pages.",
@@ -77,7 +77,7 @@
           ]
         },
         {
-          "date": "2026-08-24",
+          "date": "2026",
           "period": "2026",
           "title": "Entrelinhas",
           "description": "criação e publicação de um baralho digital de sentimentos e necessidades inspirado na comunicação não violenta.",
@@ -93,14 +93,164 @@
           ]
         },
         {
-          "date": "2024-01-26",
-          "period": "janeiro de 2024",
+          "date": "2026",
+          "period": "2026",
+          "title": "ESPOCC / Observatório de Favelas",
+          "description": "atuação como educador de tecnologia, com planejamento e facilitação de atividades sobre cultura digital e IA crítica, produção de materiais e acompanhamento da turma.",
+          "links": []
+        },
+        {
+          "date": "2026",
+          "period": "2026",
+          "title": "Estetipop — site e organização editorial",
+          "description": "diagnóstico e estabilização de um site WordPress, organização de páginas e conteúdos, documentação técnica e orientação para manutenção.",
+          "links": []
+        },
+        {
+          "date": "2026",
+          "period": "2026",
+          "title": "design instrucional e objetos de aprendizagem",
+          "description": "produção de uma formação continuada em sete módulos, com planos, materiais didáticos, avaliações, guias e apresentações, com apoio de assistentes de IA e revisão humana.",
+          "links": []
+        },
+        {
+          "date": "2026",
+          "period": "2026",
+          "title": "Ramindex",
+          "description": "construção de um sistema de organização de arquivos, memória, contexto e documentação para dar continuidade ao trabalho com assistentes de IA.",
+          "links": []
+        },
+        {
+          "date": "2026",
+          "period": "2026",
+          "title": "Nerd de Aluguel",
+          "description": "mentoria, consultoria e assessoria em autonomia digital, organização de acervos, suporte técnico, sites e cuidados digitais.",
+          "links": [
+            {
+              "label": "conhecer os serviços",
+              "url": "https://cuidadosdigitais.com.br/"
+            }
+          ]
+        },
+        {
+          "date": "2026",
+          "period": "2026",
+          "title": "Bairrismos",
+          "description": "produção editorial de carrosséis sobre bairros, memória urbana e formas de viver a cidade.",
+          "links": []
+        },
+        {
+          "date": "2026",
+          "period": "2026",
+          "title": "Tecnorgânico — escrita e cultura digital",
+          "description": "produção de textos e materiais sobre vida digital, pausas, tipografia e relações com a tecnologia.",
+          "links": [
+            {
+              "label": "visitar o blogue",
+              "url": "https://blog.bantu.social/tecnorganico/"
+            }
+          ]
+        },
+        {
+          "date": "2025",
+          "period": "2025",
+          "title": "Inteligência (Arte)ficial: por uma defesa dos trabalhadores da arte",
+          "description": "capítulo em coautoria com Pietra Canle no livro Inteligência Artificial Generativa: discriminação e impactos sociais, organizado por Tarcízio Silva e publicado pela LiteraRUA.",
+          "links": [
+            {
+              "label": "conhecer o livro na Desvelar",
+              "url": "https://desvelar.org/inteligencia-artificial-generativa-discriminacao-e-impactos-sociais/"
+            },
+            {
+              "label": "ver a edição na LiteraRUA",
+              "url": "https://www.literarua.com.br/livros/inteligencia-artificial-generativa/"
+            }
+          ]
+        },
+        {
+          "date": "2025",
+          "period": "2025",
+          "title": "Ação Educativa",
+          "description": "atuação em projetos de educação e tecnologia, com produção de conteúdos formativos, organização de informações, relatoria e articulação com educadores e organizações.",
+          "links": []
+        },
+        {
+          "date": "2025",
+          "period": "2025",
+          "title": "NAVE em Órbita — NEO2 / multiletramento",
+          "description": "colaboração na frente de multiletramento do projeto NAVE em Órbita.",
+          "links": []
+        },
+        {
+          "date": "2025",
+          "period": "2025",
+          "title": "Frente Digital",
+          "description": "produção de relatoria de uma imersão de trabalho, sistematizando conversas e atividades para apoiar a continuidade da articulação.",
+          "links": []
+        },
+        {
+          "date": "2025",
+          "period": "2023–2025",
+          "title": "Escola de Ativismo — cuidados digitais",
+          "description": "preparação e facilitação de formações presenciais e on-line, desenvolvimento de metodologias de educação tecnológica popular e produção de materiais sobre privacidade, segurança e bem-estar digital.",
+          "links": []
+        },
+        {
+          "date": "2025",
+          "period": "2022–2025",
+          "title": "Cineclube Imbariê nos Trilhos",
+          "description": "atuação como cineclubista e assistente de produção, com apoio à realização de sessões e atividades culturais comunitárias.",
+          "links": []
+        },
+        {
+          "date": "2024",
+          "period": "2024",
           "title": "Quando a comunidade faz ciência sobre si",
           "description": "coautoria com Kita Pedroza, Renata Gracie, Thiago Ferreira e Polinho Mota em texto sobre geração cidadã de dados, publicado no Outras Palavras.",
           "links": [
             {
               "label": "ler o texto",
               "url": "https://outraspalavras.net/movimentoserebeldias/quando-a-comunidade-faz-ciencia-sobre-si/"
+            }
+          ]
+        },
+        {
+          "date": "2024",
+          "period": "2023–2024",
+          "title": "WikiFavelas / Fiocruz",
+          "description": "pesquisa e produção de conteúdos para o Dicionário de Favelas Marielle Franco, com oficinas, articulação de encontros de tecnologia e design e publicações em coautoria.",
+          "links": []
+        },
+        {
+          "date": "2024",
+          "period": "2024",
+          "title": "formação e relatoria no Maranhão",
+          "description": "preparação de roteiro formativo e produção de relatoria de atividades de educação e cuidados digitais, no trabalho com a Escola de Ativismo.",
+          "links": []
+        },
+        {
+          "date": "2024",
+          "period": "2024",
+          "title": "materiais formativos — Fundo Brasil e Cáritas",
+          "description": "colaboração na preparação de roteiros e materiais de oficinas em cuidados digitais com organizações e lideranças comunitárias, no trabalho com a Escola de Ativismo.",
+          "links": []
+        },
+        {
+          "date": "2024",
+          "period": "2024",
+          "title": "oficina Ginga — Museu do Amanhã",
+          "description": "participação na realização da oficina Ginga, no Museu do Amanhã.",
+          "links": []
+        },
+        {
+          "date": "2024",
+          "period": "2024",
+          "title": "InfoCria — presença no UOL Ecoa",
+          "description": "participação como fonte em reportagem sobre educação e cultura digital, apresentando o trabalho da InfoCria e sua relação com a autonomia tecnológica nos territórios.",
+          "links": [
+            {
+              "label": "ler a reportagem",
+              "url": "https://www.uol.com.br/ecoa/colunas/eduardo-carvalho/2024/09/12/cultura-digital-que-transforma-projeto-oferece-30-bolsas-de-r-1-mil.htm"
             }
           ]
         },
@@ -125,8 +275,8 @@
           "caption": "registro de mediação, 2023."
         },
         {
-          "date": "2023-09-20",
-          "period": "setembro de 2023",
+          "date": "2023",
+          "period": "2023",
           "title": "I Seminário de Geração Cidadã de Dados",
           "description": "mediação da mesa “Tecnologias e ferramentas de trabalho com dados”, como integrante da InfoCria, no encontro organizado por data_labe e Casa Fluminense.",
           "links": [
@@ -141,8 +291,8 @@
           ]
         },
         {
-          "date": "2023-09-20",
-          "period": "setembro de 2023",
+          "date": "2023",
+          "period": "2023",
           "title": "WikiFavelas: Um novo olhar para o direito ao saneamento",
           "description": "coautoria com Arthur William Santos em publicação no Outras Palavras sobre saneamento e geração cidadã de dados.",
           "links": [
@@ -151,6 +301,120 @@
               "url": "https://outraspalavras.net/cidadesemtranse/wikifavelas-um-novo-olhar-para-o-direito-ao-saneamento/"
             }
           ]
+        },
+        {
+          "date": "2023",
+          "period": "2023",
+          "title": "Racismo algorítmico e modos de resistência na Educação",
+          "description": "artigo autoral publicado na revista Aman-Ti-Kyr, volume 8, número 2, na edição Diversidade e Inclusão.",
+          "links": [
+            {
+              "label": "ler o artigo em PDF",
+              "url": "https://tecnorganico.files.wordpress.com/2024/01/revista_publicada_ago2023_amantikyr_rafael_ramires_baptista.pdf"
+            }
+          ]
+        },
+        {
+          "date": "2023",
+          "period": "2023",
+          "title": "InfoLambe — pesquisa territorial",
+          "description": "construção de questionário e trabalho de pesquisa sobre enchentes no Chacrinha, conectando escuta, território e geração cidadã de dados.",
+          "links": []
+        },
+        {
+          "date": "2023",
+          "period": "2023",
+          "title": "Mutirão Digital e Corporal",
+          "description": "realização de encontro que aproximou práticas corporais e cuidados digitais, em colaboração com Pietra Canle e Tati.",
+          "links": []
+        },
+        {
+          "date": "2023",
+          "period": "2022–2023",
+          "title": "Redes da Maré — formação profissional em informática",
+          "description": "docência em formação profissional em informática, com planos de aula, atividades, instrumentos de avaliação e debates sobre autonomia digital e os impactos sociais da tecnologia.",
+          "links": []
+        },
+        {
+          "date": "2023",
+          "period": "2022–2023",
+          "title": "Internews — cuidados digitais",
+          "description": "facilitação de oficina de cuidados digitais, aproximando privacidade, segurança e educação popular.",
+          "links": []
+        },
+        {
+          "date": "2023",
+          "period": "2022–2023",
+          "title": "Internet e Desigualdades — Ação Educativa / Mozilla",
+          "description": "participação em pesquisa, mediação e atividades educativas do curso Internet e Desigualdades.",
+          "links": []
+        },
+        {
+          "date": "2022",
+          "period": "2022",
+          "title": "Hand Talk TV — Racismo digital: o preconceito nos algoritmos",
+          "description": "participação em conversa com Joaquim Amado e Nicole Pessoa, com mediação de Lívia Gabos, sobre racismo digital e discriminação nos algoritmos.",
+          "links": [
+            {
+              "label": "assistir à conversa no YouTube",
+              "url": "https://www.youtube.com/watch?v=JlCTRhdv7sA"
+            }
+          ],
+          "image": "/assets/media/handtalk-racismo-digital-2022.jpeg",
+          "image_alt": "Cartaz da Hand Talk TV com o título Racismo digital: o preconceito nos algoritmos e os participantes Lívia Gabos, Joaquim Amado, Ramires Baptista e Nicole Pessoa.",
+          "caption": "divulgação: Hand Talk TV."
+        },
+        {
+          "date": "2022",
+          "period": "2022",
+          "title": "Link — festival digital de acessibilidade",
+          "description": "participação com a fala “O Papel da Diversidade nas Tendências de Futuro e Inovação”, apresentado como coordenador de programas da InfoCria.",
+          "links": [],
+          "image": "/assets/media/link-acessibilidade-2022.jpeg",
+          "image_alt": "Tela do festival Link com o nome Ramires Baptista e o título da fala O Papel da Diversidade nas Tendências de Futuro e Inovação.",
+          "caption": "registro do festival Link, Ceweb.br / NIC.br."
+        },
+        {
+          "date": "2022",
+          "period": "2022",
+          "title": "Criptofunk — Casa Hacker / Observatório de Favelas",
+          "description": "facilitação da oficina “Como educar em privacidade, segurança, desinformação e bem-estar digital”.",
+          "links": []
+        },
+        {
+          "date": "2022",
+          "period": "2020–2022",
+          "title": "ITS Rio — operações de ensino on-line",
+          "description": "apoio à elaboração de ementas e percursos formativos, gestão de ambientes virtuais de aprendizagem e operação de aulas on-line.",
+          "links": []
+        },
+        {
+          "date": "2022",
+          "period": "2022",
+          "title": "Associação Beneficente AMAR",
+          "description": "ensino de informática e acompanhamento pedagógico das turmas, com produção de registros e materiais de apoio.",
+          "links": []
+        },
+        {
+          "date": "2021",
+          "period": "2021",
+          "title": "Instituto Bola Pra Frente",
+          "description": "participação na construção do percurso formativo de tecnologia VAR e em atividades de letramento digital, aproximando informática e questões sociais do cotidiano.",
+          "links": []
+        },
+        {
+          "date": "2021",
+          "period": "2021",
+          "title": "Paróquia Santa Clara de Assis — Imbariê",
+          "description": "realização de oficinas de alfabetização digital em Imbariê.",
+          "links": []
+        },
+        {
+          "date": "2020",
+          "period": "2020",
+          "title": "Ubuntu_Labe",
+          "description": "atuação em programa de inovação com pessoas negras, apoiando a elaboração de ideias, o planejamento e a execução de projetos voltados à cidade.",
+          "links": []
         },
         {
           "date": "2019",
@@ -163,6 +427,27 @@
               "url": "https://www.terra.com.br/visao-do-corre/organizacoes-perifericas-montam-rede-para-ensinar-tecnologia,47916e3cc004094a03bb8c9ffeeea04bgd2rrnry.html"
             }
           ]
+        },
+        {
+          "date": "2019",
+          "period": "2019",
+          "title": "Akangatu — Jovens Potências de Imbariê",
+          "description": "organização de jornadas de estudo, rotinas e dinâmicas de aprendizagem com jovens da comunidade.",
+          "links": []
+        },
+        {
+          "date": "",
+          "period": "",
+          "title": "Casa Imbariê de Saberes",
+          "description": "idealização e cofundação de um espaço de articulação de saberes e atividades culturais comunitárias.",
+          "links": []
+        },
+        {
+          "date": "",
+          "period": "",
+          "title": "Conselho Municipal de Políticas Culturais de Duque de Caxias",
+          "description": "atuação como conselheiro cultural, em diálogo com a produção cultural do município.",
+          "links": []
         }
       ]
     },

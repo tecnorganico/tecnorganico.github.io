@@ -245,3 +245,6 @@ button:focus-visible, a:focus-visible {
 .timeline figcaption { margin-top: 8px; }
 .timeline-links { display: flex; flex-wrap: wrap; gap: 12px 20px; margin-top: 16px; }
 .timeline-links a { text-underline-offset: 4px; }
+.timeline > .timeline-divider { padding-bottom: 20px; }
+.timeline > .timeline-divider::before { display: none; }
+.timeline-divider h3 { color: var(--chat-secundario); }

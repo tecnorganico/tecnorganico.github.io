@@ -82,10 +82,11 @@ content:
             description: Cada item é um trabalho ou participação. Preserve coautorias; inclua apenas datas e descrições confirmadas. A ordem desta lista é a ordem exibida.
             fields:
               - name: date
-                label: Data (ano ou AAAA-MM-DD)
+                label: Ano do registro (AAAA)
                 type: string
+                description: Use apenas o ano. Sem ano confirmado, deixe em branco; o registro aparece em outros percursos.
               - name: period
-                label: Período exibido
+                label: Ano ou intervalo de anos exibido
                 type: string
               - name: title
                 label: Título

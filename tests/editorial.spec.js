@@ -1,5 +1,6 @@
 const { test, expect } = require("@playwright/test");
 const AxeBuilder = require("@axe-core/playwright").default;
+const entries = require("../content/site.json").paths.find((section) => section.id === "projetos").timeline;
 
 test("hides writings without public posts and safely handles their old URL", async ({ page }) => {
   await page.route("**/posts/manifest.json", (route) => route.fulfill({ json: [] }));
@@ -29,7 +30,14 @@ test("offers the eleven confirmed kinds of work without internal notes", async (
 test("presents an accessible timeline with real photographs and a video link", async ({ page }, testInfo) => {
   await page.goto("/#projetos");
   const timeline = page.locator(".timeline");
-  await expect(timeline.locator(":scope > li")).toHaveCount(8);
+  await expect(timeline.locator("article")).toHaveCount(entries.length);
+  for (const time of await timeline.locator("time").all()) {
+    expect(await time.textContent()).toMatch(/^\d{4}(?:–\d{4})?$/);
+    expect(await time.getAttribute("datetime")).toMatch(/^\d{4}$/);
+  }
+  for (const entry of entries) {
+    await expect(timeline.getByRole("heading", { name: entry.title, exact: true })).toHaveCount(1);
+  }
   for (const img of await timeline.locator("img").all()) {
     await img.scrollIntoViewIfNeeded();
     await expect(img).toHaveJSProperty("complete", true);
@@ -39,8 +47,8 @@ test("presents an accessible timeline with real photographs and a video link", a
   await expect(timeline.getByRole("link", { name: "assistir à gravação no YouTube" })).toHaveAttribute("href", /YKuAiRSScMs/);
   expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
   await expect(page.locator("body")).toHaveJSProperty("scrollWidth", await page.locator("body").evaluate((body) => body.clientWidth));
-  await page.screenshot({ path: testInfo.outputPath("portfolio.png"), fullPage: true });
+  await page.screenshot({ path: testInfo.outputPath("portfolio.png"), fullPage: true, scale: "css" });
   await page.getByRole("button", { name: "voltar ao início", exact: true }).click();
   await expect(timeline).toHaveCount(0);
-  await page.screenshot({ path: testInfo.outputPath("inicio.png"), fullPage: true });
+  await page.screenshot({ path: testInfo.outputPath("inicio.png"), fullPage: true, scale: "css" });
 });
