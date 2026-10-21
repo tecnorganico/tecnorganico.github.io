@@ -101,11 +101,11 @@ function renderIndex(posts) {
   <p>${escapeHtml(post.summary)}</p>
   <p class="post-meta">${escapeHtml(post.date)}${post.categories?.length ? ` · ${escapeHtml(post.categories.join(", "))}` : ""}</p>
 </article>`).join("\n");
-  const empty = `<p data-empty-posts>${posts.length ? "" : "Ainda não há publicações próprias publicadas."}</p>`;
-  return pageShell("Publicações", `<a class="post-back" href="../#escritos">Voltar ao início</a>
+  const empty = `<p data-empty-posts>${posts.length ? "nenhum texto encontrado para esta busca." : "os textos estão sendo cultivados. enquanto isso, conheça meus rumos e meu portfólio."}</p>`;
+  return pageShell("Publicações", `<a class="post-back" href="../#escritos">voltar ao início</a>
 <h1>Publicações</h1>
-<label class="post-search">Buscar publicações
-  <input type="search" data-post-search placeholder="Título, resumo ou categoria">
+<label class="post-search"${posts.length ? "" : " hidden"}>buscar publicações
+  <input type="search" data-post-search placeholder="título, resumo ou categoria">
 </label>
 <section data-post-list>${entries}${empty}</section>
 <script>
@@ -127,7 +127,7 @@ input.addEventListener("input", () => {
 
 function renderPost(post) {
   const image = post.image ? `<img class="post-image" src="../${escapeHtml(post.image.replace(/^\/+/, ""))}" alt="${escapeHtml(post.image_alt || "")}">` : "";
-  return pageShell(post.title, `<a class="post-back" href="index.html">Voltar às publicações</a>
+  return pageShell(post.title, `<a class="post-back" href="index.html">voltar às publicações</a>
 <article class="post-article">
   <p class="post-meta">${escapeHtml(post.date)}${post.categories?.length ? ` · ${escapeHtml(post.categories.join(", "))}` : ""}</p>
   <h1>${escapeHtml(post.title)}</h1>
@@ -135,7 +135,7 @@ function renderPost(post) {
   ${image}
   <div class="post-body">${renderMarkdown(post.body)}</div>
 </article>
-<p><a class="post-back" href="../#escritos">Voltar ao início</a></p>`, 1);
+<p><a class="post-back" href="../#escritos">voltar ao início</a></p>`, 1);
 }
 
 function build() {
@@ -145,6 +145,7 @@ function build() {
     if (file.endsWith(".html")) fs.rmSync(path.join(outputDir, file));
   }
   fs.writeFileSync(path.join(outputDir, "index.html"), renderIndex(posts));
+  fs.writeFileSync(path.join(outputDir, "manifest.json"), JSON.stringify(posts.map(({ slug, title }) => ({ slug, title }))));
   for (const post of posts) fs.writeFileSync(path.join(outputDir, `${post.slug}.html`), renderPost(post));
   console.log(`Generated ${posts.length} published post(s) in ${outputDir}`);
 }

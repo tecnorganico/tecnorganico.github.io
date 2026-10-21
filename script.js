@@ -1,7 +1,12 @@
 const state = {
   content: null,
   currentRoute: "home",
+  publications: [],
 };
+
+function availablePaths() {
+  return state.content.paths.filter((path) => !path.requiresPublications || state.publications.length > 0);
+}
 
 const conversation = document.querySelector("[data-conversation]");
 const choices = document.querySelector("[data-choices]");
@@ -18,8 +23,10 @@ function createMessage(text, type = "received", title = "") {
     article.append(heading);
   }
   const paragraph = document.createElement("p");
-  paragraph.textContent = text;
-  article.append(paragraph);
+  if (text) {
+    paragraph.textContent = text;
+    article.append(paragraph);
+  }
   return article;
 }
 
@@ -30,7 +37,7 @@ function createLinkMessage(item) {
   heading.className = "message-title";
   heading.textContent = item.title;
   const description = document.createElement("p");
-  description.textContent = item.summary;
+  description.textContent = item.summary || "";
   if (item.address) {
     const address = document.createElement("address");
     const code = document.createElement("code");
@@ -53,10 +60,14 @@ function createLinkMessage(item) {
   }
   const link = document.createElement("a");
   link.href = item.url;
-  link.target = "_blank";
-  link.rel = "noopener";
-  link.textContent = item.label || "Abrir conteúdo";
-  article.append(heading, description, link);
+  if (new URL(item.url, location.href).origin !== location.origin) {
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+  }
+  link.textContent = item.label || "abrir conteúdo";
+  article.append(heading);
+  if (item.summary) article.append(description);
+  article.append(link);
   if (item.date) {
     const meta = document.createElement("p");
     meta.className = "message-meta";
@@ -74,9 +85,9 @@ function createReadingPanel(item) {
   const heading = document.createElement("h2");
   heading.textContent = item.title;
   const paragraph = document.createElement("p");
-  paragraph.textContent = item.text;
+  paragraph.textContent = item.text || "";
   const list = document.createElement("ul");
-  item.points.forEach((point) => {
+  (item.points || []).forEach((point) => {
     const listItem = document.createElement("li");
     listItem.textContent = point;
     list.append(listItem);
@@ -84,13 +95,68 @@ function createReadingPanel(item) {
   const back = document.createElement("a");
   back.className = "back-link";
   back.href = "./";
-  back.textContent = "Voltar à conversa";
+  back.textContent = "voltar à conversa";
   back.addEventListener("click", (event) => {
     event.preventDefault();
     navigate("home", { focus: true });
   });
-  panel.append(heading, paragraph, list, back);
+  panel.append(heading);
+  if (item.text) panel.append(paragraph);
+  if (list.childElementCount) panel.append(list);
+  panel.append(back);
   return panel;
+}
+
+function createTimeline(entries) {
+  const section = document.createElement("section");
+  section.className = "reading-panel portfolio-panel";
+  section.setAttribute("aria-label", "linha do tempo de trabalhos e projetos");
+  const heading = document.createElement("h2");
+  heading.textContent = "trabalhos e encontros pelo caminho";
+  const list = document.createElement("ol");
+  list.className = "timeline";
+  entries.forEach((entry) => {
+    const item = document.createElement("li");
+    const article = document.createElement("article");
+    const date = document.createElement("time");
+    date.dateTime = entry.date;
+    date.textContent = entry.period || entry.date;
+    const title = document.createElement("h3");
+    title.textContent = entry.title;
+    const description = document.createElement("p");
+    description.textContent = entry.description;
+    article.append(date, title, description);
+    if (entry.image) {
+      const figure = document.createElement("figure");
+      const image = document.createElement("img");
+      image.src = entry.image;
+      image.alt = entry.image_alt || "";
+      image.loading = "lazy";
+      image.decoding = "async";
+      figure.append(image);
+      if (entry.caption) {
+        const caption = document.createElement("figcaption");
+        caption.textContent = entry.caption;
+        figure.append(caption);
+      }
+      article.append(figure);
+    }
+    const links = document.createElement("div");
+    links.className = "timeline-links";
+    (entry.links || []).forEach((resource) => {
+      const link = document.createElement("a");
+      link.href = resource.url;
+      link.textContent = resource.label;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      links.append(link);
+    });
+    if (links.childElementCount) article.append(links);
+    item.append(article);
+    list.append(item);
+  });
+  section.append(heading, list);
+  return section;
 }
 
 function renderHome() {
@@ -99,7 +165,7 @@ function renderHome() {
     createMessage(state.content.introduction)
   );
   choices.replaceChildren();
-  state.content.paths.forEach((path) => {
+  availablePaths().forEach((path) => {
     const button = document.createElement("button");
     button.className = "choice-button";
     button.type = "button";
@@ -107,7 +173,7 @@ function renderHome() {
     button.addEventListener("click", () => navigate(path.id));
     choices.append(button);
   });
-  document.querySelector(".navigation-hint").textContent = "Escolha um caminho para continuar.";
+  document.querySelector(".navigation-hint").textContent = "escolha um caminho para continuar.";
   updateCurrentNavigation("home");
 }
 
@@ -117,9 +183,10 @@ function renderPath(path) {
     createMessage(path.response),
   );
   if (path.reading) conversation.append(createReadingPanel(path.reading));
+  if (path.timeline?.length) conversation.append(createTimeline(path.timeline));
   if (path.links) path.links.forEach((item) => conversation.append(createLinkMessage(item)));
   choices.replaceChildren();
-  const otherPaths = state.content.paths.filter((item) => item.id !== path.id);
+  const otherPaths = availablePaths().filter((item) => item.id !== path.id);
   otherPaths.forEach((item) => {
     const button = document.createElement("button");
     button.className = "choice-button";
@@ -128,7 +195,7 @@ function renderPath(path) {
     button.addEventListener("click", () => navigate(item.id));
     choices.append(button);
   });
-  document.querySelector(".navigation-hint").textContent = "Você pode mudar de assunto a qualquer momento.";
+  document.querySelector(".navigation-hint").textContent = "você pode mudar de assunto a qualquer momento.";
   updateCurrentNavigation(path.id);
   conversation.lastElementChild?.scrollIntoView({ block: "nearest" });
 }
@@ -143,15 +210,15 @@ function updateCurrentNavigation(id) {
 
 function routeFromLocation() {
   const route = window.location.hash.slice(1);
-  return state.content.paths.some((path) => path.id === route) ? route : "home";
+  return availablePaths().some((path) => path.id === route) ? route : "home";
 }
 
 function navigate(id, { focus = false, updateUrl = true } = {}) {
-  const path = state.content.paths.find((item) => item.id === id);
+  const path = availablePaths().find((item) => item.id === id);
   if (path) renderPath(path);
   else renderHome();
   if (updateUrl) {
-    const url = id === "home" ? `${window.location.pathname}${window.location.search}` : `#${id}`;
+    const url = !path ? `${window.location.pathname}${window.location.search}` : `#${id}`;
     window.history.pushState({ route: id }, "", url);
   }
   document.querySelector("#conversa").scrollIntoView({ block: "start" });
@@ -179,6 +246,9 @@ async function start() {
     const response = await fetch("content/site.json");
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     state.content = await response.json();
+    const manifest = await fetch("posts/manifest.json");
+    if (!manifest.ok) throw new Error(`Manifesto de publicações: HTTP ${manifest.status}`);
+    state.publications = await manifest.json();
     document.querySelectorAll("[data-site-name]").forEach((element) => {
       element.textContent = state.content.identity.name;
     });
@@ -193,6 +263,11 @@ async function start() {
       element.alt = state.content.photo.alt;
     });
     document.querySelectorAll("[data-nav]").forEach((link) => {
+      if (link.dataset.nav !== "home") {
+        const path = availablePaths().find((item) => item.id === link.dataset.nav);
+        link.hidden = !path;
+        if (path) link.textContent = path.label;
+      }
       link.addEventListener("click", (event) => {
         event.preventDefault();
         navigate(link.dataset.nav, { focus: true });
@@ -202,8 +277,8 @@ async function start() {
     const initialRoute = routeFromLocation();
     if (initialRoute !== "home") navigate(initialRoute, { updateUrl: false });
   } catch (error) {
-    conversation.replaceChildren(createMessage("Não foi possível carregar o conteúdo deste protótipo. Verifique se ele está sendo servido por um servidor local."));
-    document.querySelector(".navigation-hint").textContent = "Conteúdo indisponível.";
+    conversation.replaceChildren(createMessage("não foi possível carregar esta página. tente atualizar ou escreva para raffael@cuidadosdigitais.com.br."));
+    document.querySelector(".navigation-hint").textContent = "conteúdo indisponível.";
     console.error("Falha ao carregar content/site.json:", error);
   }
 }

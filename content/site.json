@@ -1,10 +1,10 @@
 {
-  "greeting": "Oi, eu sou o Raffael. Que bom ter você por aqui.",
-  "introduction": "Pode me chamar de Raffael, atuo como educador que trabalha com tecnologia e escreve o mundo a partir da Baixada Fluminense. Meu trabalho aproxima educação, autonomia digital e território. Aqui reúno textos, projetos e colaborações que fiz e faço ao longo da minha trajetória.",
+  "greeting": "oi, eu sou o Raffael. que bom ter você por aqui.",
+  "introduction": "pode me chamar de Raffael, atuo como educador que trabalha com tecnologia e escreve o mundo a partir da Baixada Fluminense. meu trabalho aproxima educação, autonomia digital e território. aqui reúno textos, projetos e colaborações que fiz e faço ao longo da minha trajetória.",
   "identity": {
     "name": "Raffael Baptista",
-    "subtitle": "Autonomia digital se faz em coletivo",
-    "signature": "Autonomia digital se faz em coletivo"
+    "subtitle": "autonomia digital se faz em coletivo",
+    "signature": "autonomia digital se faz em coletivo"
   },
   "photo": {
     "src": "/assets/media/raffael-baptista.jpeg",
@@ -14,14 +14,23 @@
   "paths": [
     {
       "id": "trajetoria",
-      "label": "Trajetória",
-      "response": "Comecei na área técnica, e dei um passeio na educação. Desde então, nunca mais desvinculei as 2 coisas. Educação e tecnologia são pares no meu coração.",
+      "label": "rumos & habilidades",
+      "response": "comecei na área técnica, e dei um passeio na educação. desde então, nunca mais desvinculei as 2 coisas. educação e tecnologia são pares no meu coração.",
       "reading": {
-        "title": "Um pouco do que fiz e sou",
+        "title": "como posso colaborar",
+        "text": "esta é uma colinha dos trabalhos que posso fazer, em colaboração com pessoas, coletivos e organizações.",
         "points": [
-          "Educação popular, tecnologia e pesquisa;",
-          "Baixada Fluminense como território de origem;",
-          "Nerd de Aluguel, Cuidados Digitais, InfoCria e outras experiências."
+          "formação e facilitação em educação digital e educação popular",
+          "design instrucional e planejamento de cursos, oficinas e trilhas",
+          "criação de objetos de aprendizagem, guias, planos, apresentações e avaliações",
+          "suporte técnico, informática e apoio a ambientes de aprendizagem digital",
+          "criação, manutenção, organização e recuperação de sites",
+          "pesquisa, escrita, relatoria e produção de documentação técnica e pedagógica",
+          "gestão do conhecimento, organização de arquivos e processos digitais",
+          "pesquisa territorial e projetos de geração cidadã de dados",
+          "formação em segurança, privacidade, cuidados e autonomia digital",
+          "coordenação de atividades, equipes e projetos educacionais em tecnologia",
+          "uso de assistentes de IA na produção educacional, com revisão humana"
         ]
       },
       "links": [
@@ -30,7 +39,7 @@
           "summary": "texto autobiográfico e profissional hospedado no blog Ramificando Pensações.",
           "date": "19 de outubro de 2026",
           "url": "https://blog.bantu.social/tecnorganico/sobre",
-          "label": "LER NO BLOGUE",
+          "label": "ler no blogue",
           "address": "https://blog.bantu.social/tecnorganico/sobre",
           "primary": true
         }
@@ -38,124 +47,196 @@
     },
     {
       "id": "escritos",
-      "label": "Escritos",
-      "response": "este é a parte do meu jardim digital que mais tenho apreço. É onde guardo minhas escrituras, tudo de minha autoria. Sem IA generativa.",
+      "label": "escritos",
+      "response": "textos, ideias e conversas que cultivo no meu jardim digital.",
       "links": [
         {
-          "title": "Publicações",
-          "summary": "Lista de textos publicados diretamente no site pessoal. (zerado ainda)",
-          "date": "19 de outubro de 2026",
+          "title": "publicações",
+          "summary": "textos publicados neste site.",
           "url": "posts/index.html",
-          "label": "Abrir publicações",
-          "primary": false
+          "label": "ler os textos"
+        }
+      ],
+      "requiresPublications": true
+    },
+    {
+      "id": "projetos",
+      "label": "portfólio",
+      "response": "trabalhos, projetos e encontros que fazem parte do meu caminho entre educação, tecnologia e território.",
+      "timeline": [
+        {
+          "date": "2026-10-19",
+          "period": "2026",
+          "title": "site pessoal de Raffael Baptista",
+          "description": "reúno meu portfólio e meus textos em um site de código aberto, com edição pelo Pages CMS e publicação no GitHub Pages.",
+          "links": [
+            {
+              "label": "ver o código",
+              "url": "https://github.com/tecnorganico/tecnorganico.github.io"
+            }
+          ]
         },
         {
-          "title": "Comic Sans ainda mora aqui",
-          "summary": "Memória visual, Comic Sans, fediverso, #tersoftware e a conversa sobre fontes.",
-          "date": "26 de agosto de 2026",
-          "url": "https://blog.bantu.social/tecnorganico/comic-sans-ainda-mora-aqui",
-          "label": "Abrir texto original",
-          "primary": false
+          "date": "2026-08-24",
+          "period": "2026",
+          "title": "Entrelinhas",
+          "description": "criação e publicação de um baralho digital de sentimentos e necessidades inspirado na comunicação não violenta.",
+          "links": [
+            {
+              "label": "abrir o projeto",
+              "url": "https://tecnorganico.github.io/entrelinhas/"
+            },
+            {
+              "label": "ver o código",
+              "url": "https://github.com/tecnorganico/entrelinhas"
+            }
+          ]
         },
         {
-          "title": "O tédio voltou",
-          "summary": "Um convite editorial para passar 48 horas fora do feed, com limites e referências de estudos.",
-          "date": "24 de agosto de 2026",
-          "url": "https://blog.bantu.social/tecnorganico/o-tedio-voltou",
-          "label": "Abrir texto original",
-          "primary": false
+          "date": "2024-01-26",
+          "period": "janeiro de 2024",
+          "title": "Quando a comunidade faz ciência sobre si",
+          "description": "coautoria com Kita Pedroza, Renata Gracie, Thiago Ferreira e Polinho Mota em texto sobre geração cidadã de dados, publicado no Outras Palavras.",
+          "links": [
+            {
+              "label": "ler o texto",
+              "url": "https://outraspalavras.net/movimentoserebeldias/quando-a-comunidade-faz-ciencia-sobre-si/"
+            }
+          ]
         },
         {
-          "title": "Ramificando Pensações",
-          "summary": "Jardim digital e arquivo de textos do Tecnorgânico.",
-          "url": "https://blog.bantu.social/tecnorganico/",
-          "label": "Abrir o arquivo",
-          "primary": false
+          "date": "2023",
+          "period": "2023",
+          "title": "racismo algorítmico e educação",
+          "description": "palestra no Afroya sobre racismo algorítmico, com conversa sobre as relações entre tecnologia e educação.",
+          "image": "/assets/media/palestra-afroya-2023.jpeg",
+          "image_alt": "Raffael à frente de uma sala durante uma palestra, com participantes sentados e uma projeção ao fundo.",
+          "caption": "encontro no Afroya, 2023.",
+          "links": []
+        },
+        {
+          "date": "2023",
+          "period": "2023",
+          "title": "palestras e mediações",
+          "description": "encontros para conversar sobre educação, tecnologia e participação social.",
+          "links": [],
+          "image": "/assets/media/mediacao-2023.jpeg",
+          "image_alt": "Raffael sentado com um microfone, falando durante uma mediação.",
+          "caption": "registro de mediação, 2023."
+        },
+        {
+          "date": "2023-09-20",
+          "period": "setembro de 2023",
+          "title": "I Seminário de Geração Cidadã de Dados",
+          "description": "mediação da mesa “Tecnologias e ferramentas de trabalho com dados”, como integrante da InfoCria, no encontro organizado por data_labe e Casa Fluminense.",
+          "links": [
+            {
+              "label": "ver a programação",
+              "url": "https://datalabe.org/i-seminario-de-geracao-cidada-de-dados/"
+            },
+            {
+              "label": "assistir à gravação no YouTube",
+              "url": "https://www.youtube.com/watch?v=YKuAiRSScMs&t=8647s"
+            }
+          ]
+        },
+        {
+          "date": "2023-09-20",
+          "period": "setembro de 2023",
+          "title": "WikiFavelas: Um novo olhar para o direito ao saneamento",
+          "description": "coautoria com Arthur William Santos em publicação no Outras Palavras sobre saneamento e geração cidadã de dados.",
+          "links": [
+            {
+              "label": "ler o texto",
+              "url": "https://outraspalavras.net/cidadesemtranse/wikifavelas-um-novo-olhar-para-o-direito-ao-saneamento/"
+            }
+          ]
+        },
+        {
+          "date": "2019",
+          "period": "2019",
+          "title": "InfoCria: educação tecnológica popular",
+          "description": "início da construção coletiva da InfoCria em Imbariê, Duque de Caxias, compartilhando conhecimentos e apoiando a autonomia digital no território.",
+          "links": [
+            {
+              "label": "ler a reportagem sobre a iniciativa",
+              "url": "https://www.terra.com.br/visao-do-corre/organizacoes-perifericas-montam-rede-para-ensinar-tecnologia,47916e3cc004094a03bb8c9ffeeea04bgd2rrnry.html"
+            }
+          ]
         }
       ]
     },
     {
-      "id": "projetos",
-      "label": "Projetinhos",
-      "response": "aqui vou compartilhar o que fiz e ando por aí fazendo.",
-      "reading": {
-        "title": "projetos pessoais",
-        "text": "coisas que eu fiz, comecei fazer ou tô metendo a mão na massa ainda.",
-        "points": [
-          "Tecnorgânico: universo autoral;",
-          "Nerd de Aluguel: serviço suporte técnico humanizado;",
-          "Cuidados Digitais: tema e frente de educação em segurança digital e privacidade;",
-          "InfoCria: construção coletiva de autonomia digital."
-        ]
-      }
-    },
-    {
       "id": "contato",
       "label": "fale comigo",
-      "response": "o WhatsApp é o contato principal. Você também pode falar comigo pelo Signal e pelo Telegram, além dos outros canais abaixo.",
+      "response": "o WhatsApp é o contato principal. você também pode falar comigo pelo Signal e pelo Telegram, além dos outros canais abaixo.",
       "links": [
         {
           "title": "WhatsApp — contato principal",
           "url": "https://wa.me/5521977229377",
-          "label": "Conversar comigo (abrir WhatsApp)",
+          "label": "conversar comigo (abrir WhatsApp)",
           "address": "5521977229377",
-          "primary": true
+          "primary": true,
+          "summary": ""
         },
         {
           "title": "Signal",
-          "summary": "Você também pode falar comigo pelo Signal.",
+          "summary": "você também pode falar comigo pelo Signal.",
           "url": "https://signal.me/#p/+5521977229377",
-          "label": "Abrir Signal",
+          "label": "abrir Signal",
           "primary": false
         },
         {
           "title": "Telegram",
-          "summary": "Você também pode falar comigo pelo Telegram.",
+          "summary": "você também pode falar comigo pelo Telegram.",
           "url": "https://t.me/+5521977229377",
-          "label": "Abrir Telegram",
+          "label": "abrir Telegram",
           "primary": false
         },
         {
           "title": "E-mail",
           "url": "mailto:raffael@cuidadosdigitais.com.br",
-          "label": "Enviar e-mail",
+          "label": "enviar e-mail",
           "address": "raffael@cuidadosdigitais.com.br",
-          "primary": false
+          "primary": false,
+          "summary": ""
         },
         {
           "title": "XMPP",
-          "summary": "Endereço copiável para conversas XMPP.",
+          "summary": "conversas pelo XMPP.",
           "url": "xmpp:imbariense@conversations.im?message",
-          "label": "Abrir XMPP",
+          "label": "abrir XMPP",
           "address": "imbariense@conversations.im",
           "primary": false
         },
         {
           "title": "Matrix",
           "url": "https://matrix.to/#/@imbariense:matrix.org",
-          "label": "Abrir Matrix",
+          "label": "abrir Matrix",
           "address": "@imbariense:matrix.org",
-          "primary": false
+          "primary": false,
+          "summary": ""
         },
         {
           "title": "Mastodon",
           "url": "https://bantu.social/@tecnorganico",
-          "label": "Abrir perfil",
+          "label": "abrir perfil",
           "address": "@tecnorganico@bantu.social",
-          "primary": false
+          "primary": false,
+          "summary": ""
         },
         {
           "title": "WriteFreely",
-          "summary": "Arquivo de textos e publicações.",
+          "summary": "arquivo de textos e publicações.",
           "url": "https://blog.bantu.social/tecnorganico/",
-          "label": "Abrir arquivo",
+          "label": "abrir arquivo",
           "primary": false
         },
         {
           "title": "Pixelfed",
-          "summary": "Perfil @esquecidinho.",
+          "summary": "perfil @esquecidinho.",
           "url": "https://pixelfed.social/esquecidinho",
-          "label": "Abrir perfil",
+          "label": "abrir perfil",
           "primary": false
         }
       ]

@@ -81,3 +81,11 @@ O site não depende de servidor, banco de dados ou backend. Todos os caminhos s�
 Site: https://tecnorganico.github.io/. GitHub Pages usa GitHub Actions, com deploy exclusivo de master após build e QA. Para editar em produção no Pages CMS, selecione master, edite e salve. Acompanhe a execução na aba Actions; cms-test não publica. Rascunhos no repositório público continuam acessíveis no GitHub, embora excluídos do site gerado.
 
 Lançamento aa133c6: https://github.com/tecnorganico/tecnorganico.github.io/actions/runs/39203141459. Pós-deploy: 46 testes aprovados, 40 contra a URL pública e seis com fixtures locais.
+
+## rumos, portfólio e escritos — 20/10/2026
+
+Os nomes da navegação vêm de `content/site.json`; os IDs de rota continuam estáveis. A seção rumos & habilidades reúne os trabalhos oferecidos. A seção portfólio contém `timeline`, editável no Pages CMS: período, título, descrição, fotografia, legenda e links. A ordem da lista no painel define a ordem na página.
+
+Escritos usa `requiresPublications: true`. O build gera `posts/manifest.json` somente com artigos publicados; enquanto estiver vazio, a seção fica oculta no início e na navegação. Um acesso ao endereço antigo volta à apresentação inicial. Ao publicar o primeiro artigo, o próximo build reativa a seção automaticamente. Não é necessário editar o código.
+
+A grafia editorial usa minúsculas nos textos corridos e controles, preservando nomes próprios, siglas e títulos de obras. Os textos são armazenados assim; não há uma regra CSS que altere arbitrariamente o conteúdo.

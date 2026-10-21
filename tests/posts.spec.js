@@ -70,19 +70,20 @@ test("renders a published individual page with a direct return link", async ({ p
   await page.goto(pathToFileURL(path.join(fixtureOutput, "fixture-publicada.html")).href);
   await expect(page.getByRole("heading", { name: "Fixture publicada" })).toBeVisible();
   await expect(page.locator(".post-body")).toContainText("Este texto existe apenas durante o teste");
-  await expect(page.getByRole("link", { name: "Voltar ao início" })).toHaveAttribute("href", "../#escritos");
+  await expect(page.getByRole("link", { name: "voltar ao início" })).toHaveAttribute("href", "../#escritos");
 });
 
 test("provides a public writings listing and return link", async ({ page }) => {
   await page.goto("/posts/");
   await expect(page.getByRole("heading", { name: "Publicações" })).toBeVisible();
-  await expect(page.getByRole("link", { name: "Voltar ao início" })).toHaveAttribute("href", "../#escritos");
-  await expect(page.getByRole("searchbox", { name: "Buscar publicações" })).toBeVisible();
+  await expect(page.getByRole("link", { name: "voltar ao início" })).toHaveAttribute("href", "../#escritos");
   const posts = require("../scripts/build-posts").publicPosts();
   await expect(page.locator("[data-post]")).toHaveCount(posts.length);
   if (posts.length === 0) {
-    await expect(page.locator("[data-empty-posts]")).toContainText("Ainda não há publicações próprias publicadas.");
+    await expect(page.getByRole("searchbox")).toHaveCount(0);
+    await expect(page.locator("[data-empty-posts]")).toContainText("os textos estão sendo cultivados");
   } else {
+    await expect(page.getByRole("searchbox", { name: "buscar publicações" })).toBeVisible();
     for (const post of posts) {
       await expect(page.locator("[data-post]")).toContainText([post.title]);
     }

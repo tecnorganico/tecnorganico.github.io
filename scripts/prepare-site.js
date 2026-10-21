@@ -37,6 +37,7 @@ function prepareSite() {
   const site = JSON.parse(fs.readFileSync(path.join(root, "content/site.json"), "utf8"));
   const referencedImages = new Set([
     site.photo?.src,
+    ...site.paths.flatMap((section) => (section.timeline || []).map((entry) => entry.image)),
     ...publicPosts().map((post) => post.image),
   ].filter(Boolean));
   for (const imagePath of referencedImages) {

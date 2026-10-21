@@ -70,6 +70,50 @@ content:
           - name: response
             label: Apresentação da seção
             type: text
+          - name: requiresPublications
+            label: Mostrar somente quando houver artigos publicados
+            type: boolean
+            description: Ativado em escritos. O site oculta a seção enquanto não houver publicações sem rascunho.
+          - name: timeline
+            label: Linha do tempo do portfólio
+            type: object
+            list: true
+            required: false
+            description: Cada item é um trabalho ou participação. Preserve coautorias; inclua apenas datas e descrições confirmadas. A ordem desta lista é a ordem exibida.
+            fields:
+              - name: date
+                label: Data (ano ou AAAA-MM-DD)
+                type: string
+              - name: period
+                label: Período exibido
+                type: string
+              - name: title
+                label: Título
+                type: string
+              - name: description
+                label: Descrição da participação
+                type: text
+              - name: image
+                label: Fotografia opcional
+                type: image
+                media: images
+              - name: image_alt
+                label: Texto alternativo da fotografia
+                type: text
+              - name: caption
+                label: Legenda e crédito (se conhecido)
+                type: text
+              - name: links
+                label: Vídeos, trabalhos e fontes
+                type: object
+                list: true
+                fields:
+                  - name: label
+                    label: Texto do link
+                    type: string
+                  - name: url
+                    label: Endereço
+                    type: string
           - name: reading
             label: Área de leitura
             type: object

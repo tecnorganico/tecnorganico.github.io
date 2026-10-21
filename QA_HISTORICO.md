@@ -103,3 +103,13 @@ Validação remota de cms-test: https://github.com/tecnorganico/tecnorganico.git
 Verificação pós-deploy: 46 testes aprovados em 16,1 s, Chromium e Chromium móvel. 40 cenários acessaram a URL pública; seis verificações de fixtures/gerador foram locais. Não confundir emulação com aparelho real. Não há artigo autoral publicado: a página individual foi verificada com fixture local.
 
 Para editar oficialmente: selecionar master no Pages CMS; salvar cria commit e inicia build, QA e deploy. cms-test continua sendo teste e não publica. O primeiro salvamento de produção pelo CMS ainda não foi realizado nesta etapa. Imagens de teste preservadas no repositório e excluídas do artefato por ausência de referência pública. Conteúdo editorial da trajetória e projetos continua passível de revisão, sem inventar informações.
+
+## 2026-10-20 — rumos & habilidades e portfólio em linha do tempo
+
+- Sincronizadas e preservadas as 19 edições anteriores do CMS, até e512768.
+- Colinha de 11 trabalhos e oito marcos de portfólio com duas fotografias, fontes e gravação no YouTube. As imagens não recebem autoria ou evento específico sem comprovação; coautorias e caráter coletivo da InfoCria preservados.
+- Navegação derivada dos rótulos editáveis. Manifesto de artigos controla a seção escritos sem expor rascunhos. Campos opcionais ausentes não produzem conteúdo indefinido ou listas quebradas.
+- QA local contra o pacote final: 50 testes aprovados em Chromium/computador e Chromium móvel (23,4 s). Após a separação de uma foto genérica de mediação, oito testes editoriais repetidos e aprovados (4,5 s). Conferidas capturas desktop e móvel, carregamento das fotos, contraste automatizado, retornos e reaparecimento de escritos com um manifesto simulado de artigo publicado.
+- A primeira execução sem permissão de navegador foi bloqueada pelo ambiente; não foi classificada como defeito do site. A execução com permissão apropriada passou.
+- YAML do CMS, JavaScript, diff e workflow validados. Resultado remoto e publicação serão registrados após confirmação.
+- Limites: ano da palestra Afroya proveniente do acervo de 2023, sem inventar dia/mês; registro fotográfico genérico sem atribuição indevida ao seminário. Gravação validada por metadados, não assistida integralmente. Portfólio inicial selecionado, ampliável após conferência das demais experiências.

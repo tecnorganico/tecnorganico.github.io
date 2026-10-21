@@ -232,3 +232,16 @@ button:focus-visible, a:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+[hidden] { display: none !important; }
+.timeline { list-style: none; padding: 0 0 0 22px; margin: 24px 0 0; border-left: 2px solid var(--chat-borda); }
+.timeline > li { position: relative; padding: 0 0 36px 8px; }
+.timeline > li:last-child { padding-bottom: 0; }
+.timeline > li::before { content: ""; position: absolute; left: -29px; top: 8px; width: 10px; height: 10px; border-radius: 50%; background: var(--chat-cabecalho); }
+.timeline time, .timeline figcaption { color: var(--chat-secundario); font-size: .9rem; }
+.timeline h3 { margin: 6px 0 10px; font-size: 1.15rem; line-height: 1.4; }
+.timeline figure { margin: 18px 0; }
+.timeline img { display: block; width: 100%; height: auto; border-radius: 12px; }
+.timeline figcaption { margin-top: 8px; }
+.timeline-links { display: flex; flex-wrap: wrap; gap: 12px 20px; margin-top: 16px; }
+.timeline-links a { text-underline-offset: 4px; }
