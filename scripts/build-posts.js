@@ -123,7 +123,7 @@ input.addEventListener("input", () => {
   });
   if (empty) empty.hidden = visible > 0;
 });
-</script>`);
+</script>`, 1);
 }
 
 function renderPost(post) {
