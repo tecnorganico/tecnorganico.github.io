@@ -487,5 +487,19 @@
         }
       ]
     }
-  ]
+  ],
+  "seo": {
+    "title": "Raffael Baptista | educação digital, portfólio e escritos",
+    "description": "Portfólio de Raffael Baptista: escritos, oficinas e projetos em educação digital crítica, inclusão e vulnerabilidade digital, desde a Baixada Fluminense.",
+    "topics": [
+      "educação digital",
+      "inclusão digital",
+      "educação popular",
+      "autonomia digital",
+      "racismo algorítmico",
+      "geração cidadã de dados",
+      "educação digital crítica",
+      "vulnerabilidade digital"
+    ]
+  }
 }

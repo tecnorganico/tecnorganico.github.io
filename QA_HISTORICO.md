@@ -139,3 +139,9 @@ Publicação da correção confirmada: commit d89b691, workflow 39525098149 conc
 ## 2026-10-20 — oficina O Que O Futuro Quer?
 
 Registro de 2024 incluído por solicitação expressa do autor, com local, material e parcerias fornecidos por ele. Colagem responsiva com três fotografias originais, sem geração ou alteração das pessoas retratadas. Fotos e textos alternativos editáveis pelo CMS; pacote inclui as imagens da colagem. Oito testes editoriais passaram em 5,9 s em Chromium/computador e móvel; composição visual e YAML conferidos.
+
+## 2026-10-20 — SEO e prévias de links
+
+Adicionados metadados HTML por página, URLs canônicas, Open Graph/Twitter com fotografia do perfil, autoria JSON-LD, sitemap e robots. Seções públicas ganham versões HTML legíveis sem JavaScript; experiência de conversa e rotas anteriores preservadas. Índice llms.txt é complementar, sem garantia de adoção. Temas educação digital crítica e vulnerabilidade digital autorizados explicitamente pelo autor. Nenhum dado confidencial foi incluído.
+
+QA local contra o pacote: 58 testes aprovados em 20,4 s em Chromium/computador e móvel; dez verificações finais de SEO e acessibilidade estática passaram em 5,1 s. Incluem leitura sem JavaScript, conteúdo do portfólio, metadados de todas as páginas, foto de prévia, fixtures de artigos futuros e exclusão de rascunhos. A listagem vazia não entra no sitemap e recebe noindex; página 404 também recebe noindex. Acesso a Search Console, indexação real e atualização de caches de aplicativos não foram confirmados.

@@ -89,3 +89,7 @@ Os nomes da navegação vêm de `content/site.json`; os IDs de rota continuam es
 Escritos usa `requiresPublications: true`. O build gera `posts/manifest.json` somente com artigos publicados; enquanto estiver vazio, a seção fica oculta no início e na navegação. Um acesso ao endereço antigo volta à apresentação inicial. Ao publicar o primeiro artigo, o próximo build reativa a seção automaticamente. Não é necessário editar o código.
 
 A grafia editorial usa minúsculas nos textos corridos e controles, preservando nomes próprios, siglas e títulos de obras. Os textos são armazenados assim; não há uma regra CSS que altere arbitrariamente o conteúdo.
+
+## busca e prévias de links
+
+O build também gera versões HTML das seções, metadados de busca/compartilhamento, dados de autoria, sitemap e índice textual. Configuração editorial em `content/site.json`, editável pelo CMS. Detalhes, fontes e limites em [SEO.md](SEO.md). Edite as fontes; as páginas de `portfolio/`, `rumos-e-habilidades/` e `contato/` são geradas automaticamente.

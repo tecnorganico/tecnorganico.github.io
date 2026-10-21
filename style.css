@@ -251,3 +251,9 @@ button:focus-visible, a:focus-visible {
 .timeline > .timeline-divider { padding-bottom: 20px; }
 .timeline > .timeline-divider::before { display: none; }
 .timeline-divider h3 { color: var(--chat-secundario); }
+
+/* Navegação das páginas HTML que também funcionam sem JavaScript. */
+.seo-page nav { display: flex; flex-wrap: wrap; gap: 12px 20px; margin-bottom: 28px; }
+.seo-page { overflow-wrap: anywhere; }
+.seo-page h1 { line-height: 1.3; }
+.seo-page .timeline h2 { font-size: 1.15rem; line-height: 1.4; }

@@ -10,6 +10,10 @@ const files = [
   "style.css",
   "script.js",
   "content/site.json",
+  "sitemap.xml",
+  "robots.txt",
+  "llms.txt",
+  "404.html",
 ];
 const assetFiles = [
   "assets/media/raffael-baptista.jpeg",
@@ -47,6 +51,10 @@ function prepareSite() {
       throw new Error(`Imagem fora de assets/media: ${imagePath}`);
     }
     copy(path.join(root, relativePath), path.join(outputDir, relativePath));
+  }
+
+  for (const section of ["rumos-e-habilidades", "portfolio", "contato"]) {
+    copy(path.join(root, section, "index.html"), path.join(outputDir, section, "index.html"));
   }
 
   fs.cpSync(path.join(root, "posts"), path.join(outputDir, "posts"), { recursive: true });

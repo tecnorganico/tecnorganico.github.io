@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const { metadata } = require("./seo");
 
 const root = path.resolve(__dirname, "..");
 const sourceDir = path.resolve(process.env.POSTS_SOURCE || path.join(root, "content/posts"));
@@ -76,17 +77,16 @@ function publicPosts() {
     .sort((left, right) => String(right.date).localeCompare(String(left.date)));
 }
 
-function pageShell(title, content, depth = 0) {
+function pageShell(title, content, depth = 0, seo = {}) {
   const prefix = "../".repeat(depth);
   return `<!doctype html>
 <html lang="pt-BR" data-theme="classic">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="${escapeHtml(title)} — Raffael Baptista">
+    ${metadata({title: `${title} — Raffael Baptista`, ...seo})}
     <link rel="stylesheet" href="${prefix}style.css">
     <link rel="icon" type="image/jpeg" href="${prefix}assets/media/raffael-baptista.jpeg">
-    <title>${escapeHtml(title)} — Raffael Baptista</title>
   </head>
   <body>
     <main class="post-main">
@@ -123,7 +123,7 @@ input.addEventListener("input", () => {
   });
   if (empty) empty.hidden = visible > 0;
 });
-</script>`, 1);
+</script>`, 1, {url:"posts/", description:"Escritos de Raffael Baptista sobre educação, tecnologia e território.", schemaType:"CollectionPage", noindex:posts.length === 0});
 }
 
 function renderPost(post) {
@@ -136,7 +136,7 @@ function renderPost(post) {
   ${image}
   <div class="post-body">${renderMarkdown(post.body)}</div>
 </article>
-<p><a class="post-back" href="../#escritos">voltar ao início</a></p>`, 1);
+<p><a class="post-back" href="../#escritos">voltar ao início</a></p>`, 1, {url:`posts/${post.slug}.html`,description:post.summary,type:"article",article:post});
 }
 
 function build() {

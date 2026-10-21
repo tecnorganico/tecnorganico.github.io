@@ -19,6 +19,21 @@ content:
     path: content/site.json
     format: json
     fields:
+      - name: seo
+        label: Busca e prévias de compartilhamento
+        type: object
+        fields:
+          - name: title
+            label: Título nas buscas
+            type: string
+          - name: description
+            label: Descrição do site e dos links compartilhados
+            type: text
+          - name: topics
+            label: Temas públicos de trabalho e pesquisa
+            type: string
+            list: true
+            description: Inclua somente temas públicos autorizados. Não copie trabalhos confidenciais do acervo.
       - name: greeting
         label: Saudação inicial
         type: string

@@ -1,0 +1,29 @@
+# Raffael Baptista
+
+> Portfólio de Raffael Baptista: escritos, oficinas e projetos em educação digital crítica, inclusão e vulnerabilidade digital, desde a Baixada Fluminense.
+
+pode me chamar de Raffael, atuo como educador que trabalha com tecnologia e escreve o mundo a partir da Baixada Fluminense. meu trabalho aproxima educação, autonomia digital e território. aqui reúno textos, projetos e colaborações que fiz e faço ao longo da minha trajetória.
+
+## Páginas
+- [rumos & habilidades](https://tecnorganico.github.io/rumos-e-habilidades/)
+- [portfólio](https://tecnorganico.github.io/portfolio/)
+- [fale comigo](https://tecnorganico.github.io/contato/)
+
+## Temas públicos
+educação digital, inclusão digital, educação popular, autonomia digital, racismo algorítmico, geração cidadã de dados, educação digital crítica, vulnerabilidade digital.
+
+## Publicações e fontes externas
+- [Entrelinhas: abrir o projeto](https://tecnorganico.github.io/entrelinhas/)
+- [Entrelinhas: ver o código](https://github.com/tecnorganico/entrelinhas)
+- [Nerd de Aluguel: conhecer os serviços](https://cuidadosdigitais.com.br/)
+- [Tecnorgânico — escrita e cultura digital: visitar o blogue](https://blog.bantu.social/tecnorganico/)
+- [Inteligência (Arte)ficial: por uma defesa dos trabalhadores da arte: conhecer o livro na Desvelar](https://desvelar.org/inteligencia-artificial-generativa-discriminacao-e-impactos-sociais/)
+- [Inteligência (Arte)ficial: por uma defesa dos trabalhadores da arte: ver a edição na LiteraRUA](https://www.literarua.com.br/livros/inteligencia-artificial-generativa/)
+- [Quando a comunidade faz ciência sobre si: ler o texto](https://outraspalavras.net/movimentoserebeldias/quando-a-comunidade-faz-ciencia-sobre-si/)
+- [InfoCria — presença no UOL Ecoa: ler a reportagem](https://www.uol.com.br/ecoa/colunas/eduardo-carvalho/2024/09/12/cultura-digital-que-transforma-projeto-oferece-30-bolsas-de-r-1-mil.htm)
+- [I Seminário de Geração Cidadã de Dados: ver a programação](https://datalabe.org/i-seminario-de-geracao-cidada-de-dados/)
+- [I Seminário de Geração Cidadã de Dados: assistir à gravação no YouTube](https://www.youtube.com/watch?v=YKuAiRSScMs&t=8647s)
+- [WikiFavelas: Um novo olhar para o direito ao saneamento: ler o texto](https://outraspalavras.net/cidadesemtranse/wikifavelas-um-novo-olhar-para-o-direito-ao-saneamento/)
+- [Racismo algorítmico e modos de resistência na Educação: ler o artigo em PDF](https://tecnorganico.files.wordpress.com/2024/01/revista_publicada_ago2023_amantikyr_rafael_ramires_baptista.pdf)
+- [Hand Talk TV — Racismo digital: o preconceito nos algoritmos: assistir à conversa no YouTube](https://www.youtube.com/watch?v=JlCTRhdv7sA)
+- [InfoCria: educação tecnológica popular: ler a reportagem sobre a iniciativa](https://www.terra.com.br/visao-do-corre/organizacoes-perifericas-montam-rede-para-ensinar-tecnologia,47916e3cc004094a03bb8c9ffeeea04bgd2rrnry.html)

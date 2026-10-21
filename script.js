@@ -181,6 +181,7 @@ function renderHome() {
     createMessage(state.content.greeting),
     createMessage(state.content.introduction)
   );
+  if (state.content.seo?.topics?.length) conversation.append(createMessage(state.content.seo.topics.join(", ") + ".", "received", "temas de trabalho e escrita"));
   choices.replaceChildren();
   availablePaths().forEach((path) => {
     const button = document.createElement("button");
