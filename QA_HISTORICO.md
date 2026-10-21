@@ -125,3 +125,7 @@ Incluídos Hand Talk TV (2022), capítulo em coautoria com Pietra Canle no livro
 Confirmação direta de Raffael: Cineclube 2022–2025, como cineclubista e assistente de produção; AMAR em 2022, por seis meses. Informação autoral mais recente substitui o ano de 2021 do registro anterior. Fontes e limites em docs/2026-10-20_AMPLIACAO_DO_PORTFOLIO.md.
 
 Oito testes editoriais aprovados em 11,2 s antes da correção final de datas, em Chromium/computador e Chromium móvel: presença de todos os registros, fotos, link de vídeo, anos, acessibilidade, retorno ao início e escritos condicionais. YAML do CMS e workflow validados. Resultado remoto/pós-deploy será registrado após confirmação.
+
+### confirmação da publicação ampliada
+
+Commit 6441ac8 publicado em https://tecnorganico.github.io/ pelo workflow https://github.com/tecnorganico/tecnorganico.github.io/actions/runs/39523369996, concluído com sucesso. Oito verificações pós-deploy aprovadas em 5,9 s, em Chromium/computador e Chromium móvel, incluindo todos os 43 registros e datas somente em anos, fotos, acessibilidade automatizada, retornos e disponibilidade condicional dos escritos. Os cenários zero/uma publicação usam manifesto simulado; emulação não substitui aparelho real. Os períodos corrigidos de Cineclube e AMAR estão incluídos nesta versão final.
