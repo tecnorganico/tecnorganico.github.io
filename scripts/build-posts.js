@@ -85,6 +85,7 @@ function pageShell(title, content, depth = 0) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="${escapeHtml(title)} — Raffael Baptista">
     <link rel="stylesheet" href="${prefix}style.css">
+    <link rel="icon" type="image/jpeg" href="${prefix}assets/media/raffael-baptista.jpeg">
     <title>${escapeHtml(title)} — Raffael Baptista</title>
   </head>
   <body>

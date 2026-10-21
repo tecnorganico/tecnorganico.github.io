@@ -12,6 +12,7 @@ const files = [
   "content/site.json",
 ];
 const assetFiles = [
+  "assets/media/raffael-baptista.jpeg",
   "assets/IBMPlexSans-Medium.ttf",
   "assets/IBMPlexSans-Regular.ttf",
   "assets/OFL.txt",
