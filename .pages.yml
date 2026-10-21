@@ -104,6 +104,19 @@ content:
               - name: caption
                 label: Legenda e crédito (se conhecido)
                 type: text
+              - name: images
+                label: Fotos da colagem (opcional)
+                type: object
+                list: true
+                description: Para três fotos, coloque a vertical primeiro e as duas horizontais depois. Quando preenchida, a colagem substitui a fotografia única.
+                fields:
+                  - name: src
+                    label: Fotografia
+                    type: image
+                    media: images
+                  - name: alt
+                    label: Texto alternativo
+                    type: text
               - name: links
                 label: Vídeos, trabalhos e fontes
                 type: object

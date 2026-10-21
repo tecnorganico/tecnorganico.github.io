@@ -243,6 +243,9 @@ button:focus-visible, a:focus-visible {
 .timeline figure { margin: 18px 0; }
 .timeline img { display: block; width: 100%; height: auto; border-radius: 12px; }
 .timeline figcaption { margin-top: 8px; }
+.timeline-collage { display: grid; grid-template-columns: 9fr 8fr; gap: 8px; align-items: start; }
+.timeline-collage img:first-child { grid-row: span 2; }
+.timeline-collage img { border-radius: 6px; }
 .timeline-links { display: flex; flex-wrap: wrap; gap: 12px 20px; margin-top: 16px; }
 .timeline-links a { text-underline-offset: 4px; }
 .timeline > .timeline-divider { padding-bottom: 20px; }

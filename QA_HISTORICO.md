@@ -135,3 +135,7 @@ Commit 6441ac8 publicado em https://tecnorganico.github.io/ pelo workflow https:
 Retirados oito registros por solicitação expressa do autor e corrigidas três descrições. Portfólio atual com 35 registros. A lista de restrições e a justificativa detalhada ficam exclusivamente na memória privada; não devem ser reproduzidas em documentação pública. Experiências encontradas em acervos privados não estão automaticamente autorizadas para publicação.
 
 Publicação da correção confirmada: commit d89b691, workflow 39525098149 concluído com sucesso. Conteúdo servido pela URL oficial verificado: 35 registros, oito itens retirados e três textos corrigidos. Oito testes editoriais locais passaram em 5,4 s. Versões antigas continuam no histórico Git; não foi realizada reescrita de histórico.
+
+## 2026-10-20 — oficina O Que O Futuro Quer?
+
+Registro de 2024 incluído por solicitação expressa do autor, com local, material e parcerias fornecidos por ele. Colagem responsiva com três fotografias originais, sem geração ou alteração das pessoas retratadas. Fotos e textos alternativos editáveis pelo CMS; pacote inclui as imagens da colagem. Oito testes editoriais passaram em 5,9 s em Chromium/computador e móvel; composição visual e YAML conferidos.

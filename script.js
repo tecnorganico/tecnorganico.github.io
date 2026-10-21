@@ -137,14 +137,20 @@ function createTimeline(entries) {
     description.textContent = entry.description;
     if (entry.date) article.append(date);
     article.append(title, description);
-    if (entry.image) {
+    const photos = entry.images?.length ? entry.images : entry.image ? [{ src: entry.image, alt: entry.image_alt }] : [];
+    if (photos.length) {
       const figure = document.createElement("figure");
-      const image = document.createElement("img");
-      image.src = entry.image;
-      image.alt = entry.image_alt || "";
-      image.loading = "lazy";
-      image.decoding = "async";
-      figure.append(image);
+      const gallery = document.createElement("div");
+      if (photos.length > 1) gallery.className = "timeline-collage";
+      photos.forEach((photo) => {
+        const image = document.createElement("img");
+        image.src = photo.src;
+        image.alt = photo.alt || "";
+        image.loading = "lazy";
+        image.decoding = "async";
+        gallery.append(image);
+      });
+      figure.append(gallery);
       if (entry.caption) {
         const caption = document.createElement("figcaption");
         caption.textContent = entry.caption;

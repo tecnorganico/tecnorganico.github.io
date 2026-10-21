@@ -179,6 +179,28 @@
         {
           "date": "2024",
           "period": "2024",
+          "title": "InfoCria: oficina O Que O Futuro Quer?",
+          "description": "oficina da InfoCria na FAETEC de Imbariê, em parceria com o Cineclube Imbariê Nos Trilhos, com material da Tactical Tech traduzido e cedido pela Casa Hacker para aplicação de oficinas no Rio de Janeiro.",
+          "images": [
+            {
+              "src": "/assets/media/oficina-futuro-2024-mediacao.jpg",
+              "alt": "mediação da oficina, com projeção da InfoCria e materiais de atividade dispostos no chão."
+            },
+            {
+              "src": "/assets/media/oficina-futuro-2024-auditorio.jpg",
+              "alt": "vista do auditório da FAETEC de Imbariê durante a oficina, com a mediação à esquerda e participantes nas cadeiras."
+            },
+            {
+              "src": "/assets/media/oficina-futuro-2024-encontro.jpg",
+              "alt": "registro coletivo dos participantes da oficina no auditório da FAETEC de Imbariê."
+            }
+          ],
+          "caption": "oficina O Que O Futuro Quer?, FAETEC de Imbariê, 2024.",
+          "links": []
+        },
+        {
+          "date": "2024",
+          "period": "2024",
           "title": "Quando a comunidade faz ciência sobre si",
           "description": "coautoria com Kita Pedroza, Renata Gracie, Thiago Ferreira e Polinho Mota em texto sobre geração cidadã de dados, publicado no Outras Palavras.",
           "links": [
