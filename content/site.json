@@ -67,18 +67,6 @@
         {
           "date": "2026",
           "period": "2026",
-          "title": "site pessoal de Raffael Baptista",
-          "description": "reúno meu portfólio e meus textos em um site de código aberto, com edição pelo Pages CMS e publicação no GitHub Pages.",
-          "links": [
-            {
-              "label": "ver o código",
-              "url": "https://github.com/tecnorganico/tecnorganico.github.io"
-            }
-          ]
-        },
-        {
-          "date": "2026",
-          "period": "2026",
           "title": "Entrelinhas",
           "description": "criação e publicação de um baralho digital de sentimentos e necessidades inspirado na comunicação não violenta.",
           "links": [
@@ -116,13 +104,6 @@
         {
           "date": "2026",
           "period": "2026",
-          "title": "Ramindex",
-          "description": "construção de um sistema de organização de arquivos, memória, contexto e documentação para dar continuidade ao trabalho com assistentes de IA.",
-          "links": []
-        },
-        {
-          "date": "2026",
-          "period": "2026",
           "title": "Nerd de Aluguel",
           "description": "mentoria, consultoria e assessoria em autonomia digital, organização de acervos, suporte técnico, sites e cuidados digitais.",
           "links": [
@@ -131,13 +112,6 @@
               "url": "https://cuidadosdigitais.com.br/"
             }
           ]
-        },
-        {
-          "date": "2026",
-          "period": "2026",
-          "title": "Bairrismos",
-          "description": "produção editorial de carrosséis sobre bairros, memória urbana e formas de viver a cidade.",
-          "links": []
         },
         {
           "date": "2026",
@@ -177,8 +151,8 @@
         {
           "date": "2025",
           "period": "2025",
-          "title": "NAVE em Órbita — NEO2 / multiletramento",
-          "description": "colaboração na frente de multiletramento do projeto NAVE em Órbita.",
+          "title": "Nave em Órbita (NEO2) - Instituto Futuros e Multiletramentos",
+          "description": "atuação como mediador no curso de desenvolvimento de games, na Escola Nave.",
           "links": []
         },
         {
@@ -219,20 +193,6 @@
           "period": "2023–2024",
           "title": "WikiFavelas / Fiocruz",
           "description": "pesquisa e produção de conteúdos para o Dicionário de Favelas Marielle Franco, com oficinas, articulação de encontros de tecnologia e design e publicações em coautoria.",
-          "links": []
-        },
-        {
-          "date": "2024",
-          "period": "2024",
-          "title": "formação e relatoria no Maranhão",
-          "description": "preparação de roteiro formativo e produção de relatoria de atividades de educação e cuidados digitais, no trabalho com a Escola de Ativismo.",
-          "links": []
-        },
-        {
-          "date": "2024",
-          "period": "2024",
-          "title": "materiais formativos — Fundo Brasil e Cáritas",
-          "description": "colaboração na preparação de roteiros e materiais de oficinas em cuidados digitais com organizações e lideranças comunitárias, no trabalho com a Escola de Ativismo.",
           "links": []
         },
         {
@@ -325,7 +285,7 @@
           "date": "2023",
           "period": "2023",
           "title": "Mutirão Digital e Corporal",
-          "description": "realização de encontro que aproximou práticas corporais e cuidados digitais, em colaboração com Pietra Canle e Tati.",
+          "description": "realização de encontro que aproximou práticas corporais e cuidados digitais em Jardim Imbariê, Duque de Caxias.",
           "links": []
         },
         {
@@ -412,8 +372,8 @@
         {
           "date": "2020",
           "period": "2020",
-          "title": "Ubuntu_Labe",
-          "description": "atuação em programa de inovação com pessoas negras, apoiando a elaboração de ideias, o planejamento e a execução de projetos voltados à cidade.",
+          "title": "Ubuntu_Labe | Coppe/UFRJ",
+          "description": "coordenação em programa de inovação com pessoas negras, apoiando a elaboração de ideias, o planejamento e a execução de projetos voltados às cidades inteligentes.",
           "links": []
         },
         {
@@ -427,27 +387,6 @@
               "url": "https://www.terra.com.br/visao-do-corre/organizacoes-perifericas-montam-rede-para-ensinar-tecnologia,47916e3cc004094a03bb8c9ffeeea04bgd2rrnry.html"
             }
           ]
-        },
-        {
-          "date": "2019",
-          "period": "2019",
-          "title": "Akangatu — Jovens Potências de Imbariê",
-          "description": "organização de jornadas de estudo, rotinas e dinâmicas de aprendizagem com jovens da comunidade.",
-          "links": []
-        },
-        {
-          "date": "",
-          "period": "",
-          "title": "Casa Imbariê de Saberes",
-          "description": "idealização e cofundação de um espaço de articulação de saberes e atividades culturais comunitárias.",
-          "links": []
-        },
-        {
-          "date": "",
-          "period": "",
-          "title": "Conselho Municipal de Políticas Culturais de Duque de Caxias",
-          "description": "atuação como conselheiro cultural, em diálogo com a produção cultural do município.",
-          "links": []
         }
       ]
     },

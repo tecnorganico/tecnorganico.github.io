@@ -7,3 +7,8 @@
 - Preserve acessibilidade, segurança, validação e tratamento de erros.
 - Revise o diff e faça verificações proporcionais ao risco.
 - Informe limitações e o que não foi verificado.
+
+## Publicação e confidencialidade
+
+- O acervo privado não é autorização para publicação. Antes de ampliar portfólios, consulte as restrições vigentes na memória privada do autor; se ela não estiver disponível, peça autorização específica.
+- Não restaure registros retirados por confidencialidade a partir do histórico Git, de inventários ou de versões anteriores. Reintrodução exige pedido explícito e confirmação prévia do autor. Não copie a lista privada de restrições para este repositório público.

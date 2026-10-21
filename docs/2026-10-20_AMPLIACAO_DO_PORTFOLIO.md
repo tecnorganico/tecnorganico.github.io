@@ -2,11 +2,11 @@
 
 ## pedido e resultado
 
-Inclusão das participações na Hand Talk, capítulo no livro divulgado pela Desvelar, artigo na Aman-Ti-Kyr, atuação no Instituto Bola Pra Frente e demais organizações e trabalhos registrados. A linha do tempo passou de oito para 43 registros. Exibição apenas de anos ou intervalos de anos; sem mês ou dia.
+Inclusão das participações na Hand Talk, capítulo no livro divulgado pela Desvelar, artigo na Aman-Ti-Kyr, atuação no Instituto Bola Pra Frente e demais organizações e trabalhos registrados. A linha do tempo foi ampliada e posteriormente revisada por orientação do autor; a versão atual contém 35 registros autorizados. Exibição apenas de anos ou intervalos de anos; sem mês ou dia.
 
 Foram incluídas experiências com ITS Rio, Redes da Maré, Escola de Ativismo, Ação Educativa, WikiFavelas/Fiocruz, ESPOCC/Observatório de Favelas, NAVE em Órbita, Estetipop, Ubuntu_Labe, Instituto Bola Pra Frente, Paróquia Santa Clara de Assis, Cineclube e iniciativas comunitárias, além das publicações, mediações e projetos autorais. Descrições funcionais não criam cargos formais, duração atual ou vínculo empregatício onde o registro só sustenta participação/serviço.
 
-Casa Imbariê de Saberes e Conselho de Cultura foram incluídos em “outros percursos”, sem fabricar datas. Raffael confirmou diretamente nesta rodada: Cineclube de 2022 a 2025, como cineclubista e assistente de produção; AMAR em 2022, por seis meses. O dado anterior de 2021 para o Cineclube foi substituído por essa confirmação, mantendo-se o registro antigo apenas nas fontes históricas. A exibição pública usa somente anos. Propostas sem execução, materiais familiares e casos confidenciais identificáveis não foram publicados.
+Raffael confirmou diretamente nesta rodada: Cineclube de 2022 a 2025, como cineclubista e assistente de produção; AMAR em 2022, por seis meses. O dado anterior de 2021 para o Cineclube foi substituído por essa confirmação, mantendo-se o registro antigo apenas nas fontes históricas. A exibição pública usa somente anos. A seleção pública foi corrigida posteriormente a pedido do autor. A existência de registros no acervo privado não autoriza sua divulgação.
 
 ## fontes das quatro inclusões solicitadas
 

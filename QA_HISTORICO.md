@@ -118,7 +118,7 @@ Para editar oficialmente: selecionar master no Pages CMS; salvar cria commit e i
 
 Commit 353857a publicado pelo workflow https://github.com/tecnorganico/tecnorganico.github.io/actions/runs/39518854700. Oito verificações pós-deploy passaram em 5,3 s, incluindo timeline, fotos, acessibilidade e disponibilidade condicional dos escritos. Os cenários zero/uma publicação usam manifesto simulado. README e fixture de rascunho retornaram 404 no site final. Fonte Pages encontrada em legacy durante a execução e restaurada para workflow; sem atribuir causa à mudança. A versão final usa o pacote filtrado.
 
-## 2026-10-20 — portfólio ampliado para 43 registros
+## 2026-10-20 — ampliação inicial do portfólio (substituída pela revisão posterior)
 
 Incluídos Hand Talk TV (2022), capítulo em coautoria com Pietra Canle no livro da Desvelar/LiteraRUA (2025), artigo da Aman-Ti-Kyr (2023), Instituto Bola Pra Frente (2021), locais de atuação e outros projetos. Exibição somente de anos/intervalos de anos. Registros sem ano confirmado ficam em outros percursos, sem gerar datas artificiais.
 
@@ -129,3 +129,7 @@ Oito testes editoriais aprovados em 11,2 s antes da correção final de datas, e
 ### confirmação da publicação ampliada
 
 Commit 6441ac8 publicado em https://tecnorganico.github.io/ pelo workflow https://github.com/tecnorganico/tecnorganico.github.io/actions/runs/39523369996, concluído com sucesso. Oito verificações pós-deploy aprovadas em 5,9 s, em Chromium/computador e Chromium móvel, incluindo todos os 43 registros e datas somente em anos, fotos, acessibilidade automatizada, retornos e disponibilidade condicional dos escritos. Os cenários zero/uma publicação usam manifesto simulado; emulação não substitui aparelho real. Os períodos corrigidos de Cineclube e AMAR estão incluídos nesta versão final.
+
+## 2026-10-20 — retirada imediata e revisão autorizada
+
+Retirados oito registros por solicitação expressa do autor e corrigidas três descrições. Portfólio atual com 35 registros. A lista de restrições e a justificativa detalhada ficam exclusivamente na memória privada; não devem ser reproduzidas em documentação pública. Experiências encontradas em acervos privados não estão automaticamente autorizadas para publicação.
