@@ -113,3 +113,7 @@ Para editar oficialmente: selecionar master no Pages CMS; salvar cria commit e i
 - A primeira execução sem permissão de navegador foi bloqueada pelo ambiente; não foi classificada como defeito do site. A execução com permissão apropriada passou.
 - YAML do CMS, JavaScript, diff e workflow validados. Resultado remoto e publicação serão registrados após confirmação.
 - Limites: ano da palestra Afroya proveniente do acervo de 2023, sem inventar dia/mês; registro fotográfico genérico sem atribuição indevida ao seminário. Gravação validada por metadados, não assistida integralmente. Portfólio inicial selecionado, ampliável após conferência das demais experiências.
+
+### confirmação da publicação
+
+Commit 353857a publicado pelo workflow https://github.com/tecnorganico/tecnorganico.github.io/actions/runs/39518854700. Oito verificações pós-deploy passaram em 5,3 s, incluindo timeline, fotos, acessibilidade e disponibilidade condicional dos escritos. Os cenários zero/uma publicação usam manifesto simulado. README e fixture de rascunho retornaram 404 no site final. Fonte Pages encontrada em legacy durante a execução e restaurada para workflow; sem atribuir causa à mudança. A versão final usa o pacote filtrado.

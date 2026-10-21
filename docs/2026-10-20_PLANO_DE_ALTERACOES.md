@@ -23,3 +23,7 @@ IDs antigos preservados para não quebrar links: trajetoria, projetos, escritos 
 - https://www.terra.com.br/visao-do-corre/organizacoes-perifericas-montam-rede-para-ensinar-tecnologia,47916e3cc004094a03bb8c9ffeeea04bgd2rrnry.html — origem coletiva da InfoCria em 2019.
 
 As fotografias vêm do acervo fornecido para o portfólio. Os originais foram preservados. A fotografia genérica de mediação não foi atribuída a um evento específico sem confirmação. Autoria fotográfica não identificada: não se atribuiu licença aberta nem crédito inventado. As outras experiências do inventário podem ser acrescentadas gradualmente após conferência, sem expor fontes privadas ou casos confidenciais.
+
+## conclusão
+
+Três etapas concluídas. Publicação 353857a validada em https://tecnorganico.github.io/. Relatório e execução referenciados em QA_HISTORICO.md.
