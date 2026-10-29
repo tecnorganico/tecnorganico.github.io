@@ -7,7 +7,7 @@ function buildSEO() {
   const site = readSite();
   const posts = publicPosts();
   const sections = site.paths.filter(section => !section.requiresPublications || posts.length);
-  const nav = `<nav aria-label="navegação do site"><a href="/">início</a>${sections.map(s => `<a href="/${routes[s.id]}">${e(s.label)}</a>`).join('')}</nav>`;
+  const nav = `<nav aria-label="navegação do site"><a href="/">início</a>${sections.map(s => `<a href="/${routes[s.id]}">${e(s.label)}</a>`).join('')}<a href="/${routes.curriculo}">currículo</a></nav>`;
   const link = l => `<a href="${e(l.url)}">${e(l.label || l.title || 'abrir conteúdo')}</a>`;
   const photo = p => `<img src="${e(p.src)}" alt="${e(p.alt)}" loading="lazy" decoding="async">`;
   function timeline(entries) {
@@ -15,7 +15,8 @@ function buildSEO() {
   }
   function sectionBody(s) {
     const r = s.reading;
-    return `<p>${e(s.response)}</p>${r ? `<section><h2>${e(r.title)}</h2>${r.text ? `<p>${e(r.text)}</p>` : ''}${r.points?.length ? `<ul>${r.points.map(p=>`<li>${e(p)}</li>`).join('')}</ul>` : ''}</section>` : ''}${s.id==='trajetoria' ? `<section><h2>temas de trabalho e escrita</h2><p>${e(site.seo.topics.join(', '))}.</p></section>` : ''}${s.timeline?.length ? timeline(s.timeline) : ''}${(s.links || []).map(x=>`<section><h2>${e(x.title)}</h2>${x.summary ? `<p>${e(x.summary)}</p>` : ''}${x.address ? `<p>${e(x.address)}</p>` : ''}${link(x)}</section>`).join('')}`;
+    const resumeLink = s.id === 'projetos' ? `<section class="resume-callout"><h2>currículo profissional</h2><p>experiências, projetos, publicações e áreas de atuação em educação, tecnologia e suporte.</p><a class="resume-button" href="/${routes.curriculo}">ver currículo completo</a></section>` : '';
+    return `<p>${e(s.response)}</p>${resumeLink}${r ? `<section><h2>${e(r.title)}</h2>${r.text ? `<p>${e(r.text)}</p>` : ''}${r.points?.length ? `<ul>${r.points.map(p=>`<li>${e(p)}</li>`).join('')}</ul>` : ''}</section>` : ''}${s.id==='trajetoria' ? `<section><h2>temas de trabalho e escrita</h2><p>${e(site.seo.topics.join(', '))}.</p></section>` : ''}${s.timeline?.length ? timeline(s.timeline) : ''}${(s.links || []).map(x=>`<section><h2>${e(x.title)}</h2>${x.summary ? `<p>${e(x.summary)}</p>` : ''}${x.address ? `<p>${e(x.address)}</p>` : ''}${link(x)}</section>`).join('')}`;
   }
   function page(title, url, body, description, noindex=false) {
     return `<!doctype html>\n<html lang="pt-BR" data-theme="classic"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">${metadata({title,description,url,noindex,schemaType:url==='portfolio/'?'CollectionPage':'WebPage'})}<link rel="stylesheet" href="../style.css"><link rel="icon" type="image/jpeg" href="${e(site.photo.src)}"></head><body><main class="post-main seo-page">${nav}<h1>${e(title)}</h1>${body}<p><a href="/">voltar ao início</a></p></main></body></html>\n`;
@@ -29,6 +30,24 @@ function buildSEO() {
     fs.writeFileSync(path.join(root,url,'index.html'),page(titles[s.id],url,sectionBody(s),descriptions[s.id]));
     urls.push(url);
   }
+  const portfolio = site.paths.find(s => s.id === 'projetos');
+  const trajectory = site.paths.find(s => s.id === 'trajetoria');
+  const contact = site.paths.find(s => s.id === 'contato');
+  const contactEmail = contact?.links?.find(x => x.title?.toLowerCase().includes('e-mail'));
+  const contactWhatsapp = contact?.links?.find(x => x.primary);
+  const roleCards = [
+    ['suporte técnico e analista de suporte', 'apoio a pessoas e equipes, ambientes de aprendizagem, informática, sites e organização de recursos digitais.'],
+    ['analista e coordenação de projetos', 'planejamento, acompanhamento, articulação, documentação e execução de projetos educacionais e de inovação.'],
+    ['designer instrucional', 'desenho de cursos, oficinas e trilhas; produção de materiais, objetos de aprendizagem e avaliações.'],
+    ['educador e facilitador em tecnologia', 'formação em educação digital, inclusão, autonomia, segurança e cuidados digitais.'],
+    ['pesquisa e produção de conteúdo', 'pesquisa territorial, escrita, relatoria e documentação técnica e pedagógica.'],
+  ];
+  const timelineResume = entries => `<ol class="timeline resume-timeline">${entries.map(x => `<li><article><time datetime="${e(x.date || '')}">${e(x.period || x.date || '')}</time><h2>${e(x.title)}</h2><p>${e(x.description)}</p>${x.links?.length ? `<div class="timeline-links">${x.links.map(link).join('')}</div>` : ''}</article></li>`).join('')}</ol>`;
+  const resumeDescription = 'Currículo de Raffael Baptista: educador de tecnologia, designer instrucional, analista de projetos e suporte técnico, com trajetória em educação digital e inclusão na Baixada Fluminense.';
+  const resumeBody = `<p class="resume-lead">educador de tecnologia com trajetória que aproxima educação, autonomia digital e território. reúne experiência em formação, suporte técnico, desenho de aprendizagem, pesquisa e realização de projetos na Baixada Fluminense e em colaboração com organizações.</p><div class="resume-actions"><a class="resume-button" href="mailto:${e(contactEmail?.address || 'raffael@cuidadosdigitais.com.br')}">entrar em contato</a>${contactWhatsapp ? `<a href="${e(contactWhatsapp.url)}">conversar pelo WhatsApp</a>` : ''}</div><section><h2>áreas de atuação</h2><ul class="resume-roles">${roleCards.map(([title,description])=>`<li><h3>${e(title)}</h3><p>${e(description)}</p></li>`).join('')}</ul></section><section><h2>competências e serviços</h2><ul>${(trajectory?.reading?.points || []).map(x=>`<li>${e(x)}</li>`).join('')}</ul></section><section><h2>experiência, projetos e publicações</h2><p>trajetória cronológica baseada nas experiências e produções apresentadas no portfólio público.</p>${timelineResume(portfolio?.timeline || [])}</section><p class="resume-back"><a href="/${routes.projetos}">voltar ao portfólio</a></p>`;
+  fs.mkdirSync(path.join(root, routes.curriculo), { recursive: true });
+  fs.writeFileSync(path.join(root, routes.curriculo, 'index.html'), page('currículo — Raffael Baptista | educação, projetos e tecnologia', routes.curriculo, resumeBody, resumeDescription));
+  urls.push(routes.curriculo);
   if(posts.length) urls.push('posts/',...posts.map(p=>'posts/'+p.slug+'.html'));
   let home=fs.readFileSync(path.join(root,'index.html'),'utf8');
   home=home.replace(/<!-- SEO:START -->[\s\S]*?<!-- SEO:END -->/,`<!-- SEO:START -->\n    ${metadata({schemaType:'ProfilePage'})}\n    <!-- SEO:END -->`);
@@ -40,7 +59,7 @@ function buildSEO() {
   fs.writeFileSync(path.join(root,'sitemap.xml'),`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map(u=>`<url><loc>${e(absolute(u))}</loc></url>`).join('')}</urlset>\n`);
   fs.writeFileSync(path.join(root,'robots.txt'),`User-agent: *\nAllow: /\n\nSitemap: ${base}sitemap.xml\n`);
   const references=site.paths.flatMap(s=>(s.timeline||[]).flatMap(t=>(t.links||[]).filter(l=>/^https:\/\//.test(l.url)).map(l=>`- [${t.title}: ${l.label}](${l.url})`)));
-  fs.writeFileSync(path.join(root,'llms.txt'),`# ${site.identity.name}\n\n> ${site.seo.description}\n\n${site.introduction}\n\n## Páginas\n${sections.map(s=>`- [${s.label}](${absolute(routes[s.id])})`).join('\n')}\n\n## Temas públicos\n${site.seo.topics.join(', ')}.\n\n## Publicações e fontes externas\n${references.join('\n')}\n`);
+  fs.writeFileSync(path.join(root,'llms.txt'),`# ${site.identity.name}\n\n> ${site.seo.description}\n\n${site.introduction}\n\n## Páginas\n${sections.map(s=>`- [${s.label}](${absolute(routes[s.id])})`).join('\n')}\n- [currículo](${absolute(routes.curriculo)})\n\n## Temas públicos\n${site.seo.topics.join(', ')}.\n\n## Publicações e fontes externas\n${references.join('\n')}\n`);
   fs.writeFileSync(path.join(root,'404.html'),page('página não encontrada','404.html','<p>este endereço não foi encontrado. volte ao início para continuar.</p>','Página não encontrada no site de Raffael Baptista.',true).replace('href="../style.css"','href="/style.css"'));
   console.log(`Generated SEO metadata, ${urls.length} sitemap URLs and static sections.`);
 }

@@ -8,6 +8,7 @@ pode me chamar de Raffael, atuo como educador que trabalha com tecnologia e escr
 - [rumos & habilidades](https://tecnorganico.github.io/rumos-e-habilidades/)
 - [portfólio](https://tecnorganico.github.io/portfolio/)
 - [fale comigo](https://tecnorganico.github.io/contato/)
+- [currículo](https://tecnorganico.github.io/curriculo/)
 
 ## Temas públicos
 educação digital, inclusão digital, educação popular, autonomia digital, racismo algorítmico, geração cidadã de dados, educação digital crítica, vulnerabilidade digital.

@@ -257,3 +257,22 @@ button:focus-visible, a:focus-visible {
 .seo-page { overflow-wrap: anywhere; }
 .seo-page h1 { line-height: 1.3; }
 .seo-page .timeline h2 { font-size: 1.15rem; line-height: 1.4; }
+.resume-callout { padding: 20px; margin: 24px 0; border: 1px solid var(--chat-borda); border-radius: 16px; background: var(--chat-painel); }
+.resume-callout h2, .resume-callout p { margin-top: 0; }
+.resume-button { display: inline-block; padding: 10px 16px; border-radius: 999px; background: var(--chat-cabecalho); color: #fff; font-weight: 600; text-decoration: none; }
+.resume-lead { max-width: 72ch; font-size: 1.15rem; }
+.resume-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin: 20px 0 32px; }
+.resume-roles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 14px; padding: 0; list-style: none; }
+.resume-roles li { padding: 16px; border: 1px solid var(--chat-borda); border-radius: 14px; background: var(--chat-painel); }
+.resume-roles h3, .resume-roles p { margin: 0; }
+.resume-roles p { margin-top: 8px; color: var(--chat-secundario); }
+.resume-timeline h2 { margin: 5px 0 8px; }
+.resume-back { margin-top: 32px; }
+@media print {
+  body { min-width: 0; background: #fff; color: #111; font: 11pt/1.45 sans-serif; }
+  .seo-page { width: auto; max-width: none; padding: 0; margin: 0; }
+  .seo-page nav, .resume-actions, .resume-back, .timeline-links { display: none; }
+  .resume-roles li { break-inside: avoid; background: #fff; }
+  .resume-timeline > li { break-inside: avoid; padding-bottom: 18px; }
+  a { color: inherit; }
+}

@@ -53,7 +53,7 @@ function prepareSite() {
     copy(path.join(root, relativePath), path.join(outputDir, relativePath));
   }
 
-  for (const section of ["rumos-e-habilidades", "portfolio", "contato"]) {
+  for (const section of ["rumos-e-habilidades", "portfolio", "curriculo", "contato"]) {
     copy(path.join(root, section, "index.html"), path.join(outputDir, section, "index.html"));
   }
 

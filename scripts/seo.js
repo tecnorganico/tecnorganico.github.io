@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const base = 'https://tecnorganico.github.io/';
-const routes = { trajetoria: 'rumos-e-habilidades/', projetos: 'portfolio/', contato: 'contato/', escritos: 'posts/' };
+const routes = { trajetoria: 'rumos-e-habilidades/', projetos: 'portfolio/', curriculo: 'curriculo/', contato: 'contato/', escritos: 'posts/' };
 const readSite = () => JSON.parse(fs.readFileSync(path.join(__dirname, '../content/site.json'), 'utf8'));
 const escape = (value) => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const absolute = value => new URL(value, base).href;
