@@ -6,6 +6,7 @@
     "qa:report": "playwright show-report",
     "build:posts": "node scripts/build-posts.js",
     "build:artifact": "npm run build:posts && npm run build:seo && node scripts/prepare-site.js",
+    "build:curriculum:pdf": "python3 scripts/build-curriculum-pdf.py",
     "build:seo": "node scripts/build-seo.js"
   },
   "devDependencies": {

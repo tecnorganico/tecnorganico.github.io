@@ -56,6 +56,7 @@ function prepareSite() {
   for (const section of ["rumos-e-habilidades", "portfolio", "curriculo", "contato"]) {
     copy(path.join(root, section, "index.html"), path.join(outputDir, section, "index.html"));
   }
+  copy(path.join(root, "curriculo", "raffael-baptista.pdf"), path.join(outputDir, "curriculo", "raffael-baptista.pdf"));
 
   fs.cpSync(path.join(root, "posts"), path.join(outputDir, "posts"), { recursive: true });
 
