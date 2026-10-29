@@ -30,6 +30,18 @@ function createMessage(text, type = "received", title = "") {
   return article;
 }
 
+function createResumeMessage() {
+  const article = document.createElement("article");
+  article.className = "message message-received resume-message";
+  const paragraph = document.createElement("p");
+  paragraph.append("também quer conhecer minha trajetória profissional? ");
+  const link = document.createElement("a");
+  link.href = "curriculo/";
+  link.textContent = "acesse meu currículo completo";
+  paragraph.append(link);
+  article.append(paragraph);
+  return article;
+}
 function createLinkMessage(item) {
   const article = document.createElement("article");
   article.className = "message message-received";
@@ -179,6 +191,7 @@ function createTimeline(entries) {
 function renderHome() {
   conversation.replaceChildren(
     createMessage(state.content.greeting),
+    createResumeMessage(),
     createMessage(state.content.introduction)
   );
   if (state.content.seo?.topics?.length) conversation.append(createMessage(state.content.seo.topics.join(", ") + ".", "received", "temas de trabalho e escrita"));
@@ -200,6 +213,7 @@ function renderPath(path) {
     createMessage(path.label, "sent"),
     createMessage(path.response),
   );
+  if (path.id === "projetos") conversation.append(createResumeMessage());
   if (path.reading) conversation.append(createReadingPanel(path.reading));
   if (path.timeline?.length) conversation.append(createTimeline(path.timeline));
   if (path.links) path.links.forEach((item) => conversation.append(createLinkMessage(item)));

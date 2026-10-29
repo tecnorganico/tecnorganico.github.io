@@ -15,7 +15,7 @@ function buildSEO() {
   }
   function sectionBody(s) {
     const r = s.reading;
-    const resumeLink = s.id === 'projetos' ? `<section class="resume-callout"><h2>currículo profissional</h2><p>experiências, projetos, publicações e áreas de atuação em educação, tecnologia e suporte.</p><a class="resume-button" href="/${routes.curriculo}">ver currículo completo</a></section>` : '';
+    const resumeLink = s.id === 'projetos' ? `<article class="message message-received resume-callout"><h2 class="message-title">currículo profissional</h2><p>também quer conhecer minha trajetória? <a href="../${routes.curriculo}">acesse meu currículo completo</a>.</p></article>` : '';
     return `<p>${e(s.response)}</p>${resumeLink}${r ? `<section><h2>${e(r.title)}</h2>${r.text ? `<p>${e(r.text)}</p>` : ''}${r.points?.length ? `<ul>${r.points.map(p=>`<li>${e(p)}</li>`).join('')}</ul>` : ''}</section>` : ''}${s.id==='trajetoria' ? `<section><h2>temas de trabalho e escrita</h2><p>${e(site.seo.topics.join(', '))}.</p></section>` : ''}${s.timeline?.length ? timeline(s.timeline) : ''}${(s.links || []).map(x=>`<section><h2>${e(x.title)}</h2>${x.summary ? `<p>${e(x.summary)}</p>` : ''}${x.address ? `<p>${e(x.address)}</p>` : ''}${link(x)}</section>`).join('')}`;
   }
   function page(title, url, body, description, noindex=false) {
@@ -51,7 +51,7 @@ function buildSEO() {
   if(posts.length) urls.push('posts/',...posts.map(p=>'posts/'+p.slug+'.html'));
   let home=fs.readFileSync(path.join(root,'index.html'),'utf8');
   home=home.replace(/<!-- SEO:START -->[\s\S]*?<!-- SEO:END -->/,`<!-- SEO:START -->\n    ${metadata({schemaType:'ProfilePage'})}\n    <!-- SEO:END -->`);
-  home=home.replace(/<div class="conversation-inner" data-conversation>[\s\S]*?<\/div>/,`<div class="conversation-inner" data-conversation><article class="message message-received"><p>${e(site.greeting)}</p></article><article class="message message-received"><p>${e(site.introduction)}</p></article><article class="message message-received"><h2 class="message-title">temas de trabalho e escrita</h2><p>${e(site.seo.topics.join(", "))}.</p></article></div>`);
+  home=home.replace(/<div class="conversation-inner" data-conversation>[\s\S]*?<\/div>/,`<div class="conversation-inner" data-conversation><article class="message message-received"><p>${e(site.greeting)}</p></article><article class="message message-received resume-message"><p>também quer conhecer minha trajetória profissional? <a href="curriculo/">acesse meu currículo completo</a>.</p></article><article class="message message-received"><p>${e(site.introduction)}</p></article><article class="message message-received"><h2 class="message-title">temas de trabalho e escrita</h2><p>${e(site.seo.topics.join(", "))}.</p></article></div>`);
   home=home.replace(/<div class="choice-grid" data-choices>[\s\S]*?<\/div>/,`<div class="choice-grid" data-choices>${sections.map(s=>`<a class="choice-button" href="${routes[s.id]}">${e(s.label)}</a>`).join('')}</div>`);
   home=home.replace(/<noscript>[\s\S]*?<\/noscript>/,`<noscript><p class="noscript">você pode navegar pelas seções usando os links desta página.</p></noscript>`);
   home=home.replace(/href="[^"]*" data-nav="(trajetoria|projetos|contato)"/g,(_,id)=>`href="${routes[id]}" data-nav="${id}"`);
